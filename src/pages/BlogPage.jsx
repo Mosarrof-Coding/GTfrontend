@@ -22,12 +22,10 @@ export default function BlogPage() {
   return (
     <section className="section prose">
       <div className="container">
-        <div className="heading text-center max-w-[760px] mx-auto pb-8">
+        <div className="heading text-center max-w-[560px] mx-auto pb-8">
           <h2 className="text-2xl font-semibold my-2">Our Blogs</h2>
           <h3 className="text-xl font-medium text-gray-600">
             Golf is a game of skill and strategy, enjoyed by millions worldwide.
-            From mastering your swing to selecting the right equipment, our blog
-            offers insights to help you improve and enjoy the game.
           </h3>
         </div>
         <div className="mygrid">

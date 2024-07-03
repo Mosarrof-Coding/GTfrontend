@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
@@ -85,9 +86,8 @@ export default function ContactPage() {
           <div className="lg:col-span-2 lg:py-12">
             <h2 className="text-3xl font-bold sm:text-4xl mb-8">Contact Us</h2>
             <p className="max-w-xl text-lg">
-              At the same time, the fact that we are wholly owned and totally
-              independent from manufacturer and other group control gives you
-              confidence that we will only recommend what is right for you.
+              Have Questions About Your Golf Game? We're Here to Help.Reach Out
+              to Our Golf Experts for Assistance and Support.
             </p>
             <div className="mt-8">
               <a href="#" className="text-2xl font-bold text-pink-600">
