@@ -3,6 +3,7 @@ import AboutPage from "./AboutPage";
 import BlogPage from "./BlogPage";
 import ContactPage from "./ContactPage";
 import ServicePage from "./ServicePage";
+import TestimonialPage from "./TestimonialPage";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <AboutPage />
       <ServicePage />
       <BlogPage />
+      <TestimonialPage />
       <ContactPage />
     </>
   );
