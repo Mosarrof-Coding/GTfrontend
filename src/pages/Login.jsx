@@ -1,6 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
+import { useState } from "react";
+import {
+  FaFacebookF,
+  FaGoogle,
+  FaRegEye,
+  FaRegEyeSlash,
+  FaTwitter,
+} from "react-icons/fa";
+
 export default function Login() {
+  // input password/text handle and eye displaying toggle
+  const [eye, setEye] = useState(false);
+  const eyeChange = () => {
+    setEye(!eye);
+  };
+
   return (
     <section className="section">
       <div className="container">
@@ -24,25 +38,36 @@ export default function Login() {
                   id="user_name"
                   name="user_name"
                   placeholder="Type your user name"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm capitalize"
                 />
               </div>
 
               <div className="">
                 <label
                   htmlFor="Password"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block mb-1 text-sm font-medium text-gray-700"
                 >
                   password
                 </label>
 
-                <input
-                  type="password"
-                  id="Password"
-                  name="password"
-                  placeholder="Type your user password"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
-                />
+                <div className="relative">
+                  <input
+                    type={eye ? "text" : "password"}
+                    id="Password"
+                    name="password"
+                    placeholder="Type your user password"
+                    className="py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  />
+                  <div className="absolute right-0 top-0 min-h-full w-6 flex items-center">
+                    <span className="view cursor-pointer" onClick={eyeChange}>
+                      {eye ? (
+                        <FaRegEyeSlash size={18} />
+                      ) : (
+                        <FaRegEye size={18} />
+                      )}
+                    </span>
+                  </div>
+                </div>
               </div>
               <p className="text-right">forgot Password?</p>
 
