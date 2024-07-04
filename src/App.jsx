@@ -14,6 +14,9 @@ import ServicePage from "./pages/ServicePage";
 import Checkout from "./pages/Checkout";
 import ThankU from "./pages/ThankU";
 import TestimonialPage from "./pages/TestimonialPage";
+import AccountPage from "./pages/AccountPage";
+import Login from "./pages/Login";
+import SignPage from "./pages/SignPage";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/accounts" element={<AccountPage />} />
+          <Route path="/signup" element={<SignPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/thankU" element={<ThankU />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
