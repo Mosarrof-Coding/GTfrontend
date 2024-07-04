@@ -23,7 +23,7 @@ export default function SignPage() {
                   type="text"
                   id="FirstName"
                   name="first_name"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm capitalize"
                 />
               </div>
 
@@ -39,7 +39,7 @@ export default function SignPage() {
                   type="text"
                   id="LastName"
                   name="last_name"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm capitalize"
                 />
               </div>
 
