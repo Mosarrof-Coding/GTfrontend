@@ -1,13 +1,11 @@
+import gAboutImg from "../../assets/gAbout.jpg";
 export default function About() {
   return (
     <section className="section">
       <div className="container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 place-items-center">
           <div className="w-full overflow-hidden rounded-lg lg:order-last">
-            <img
-              alt=""
-              src={`https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80`}
-            />
+            <img alt="" src={gAboutImg} />
           </div>
 
           <div className="">
