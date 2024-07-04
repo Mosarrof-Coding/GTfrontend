@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { cartState } from "../../context/Context";
+import { GoChevronDown } from "react-icons/go";
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const { cart } = cartState();
+
+  const [active, setActive] = useState(false);
+  const accHndle = () => {
+    setActive(!active);
+  };
+
   return (
     <header className="">
       <div className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
@@ -61,7 +68,7 @@ export default function Header() {
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/"
                 >
                   <span> Home</span>
@@ -71,7 +78,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/about"
                 >
                   <span>About</span>
@@ -81,7 +88,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/service"
                 >
                   <span>Service</span>
@@ -91,7 +98,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/blog"
                 >
                   <span>Blog</span>
@@ -101,7 +108,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/testimonials"
                 >
                   <span>Testimonial</span>
@@ -111,12 +118,40 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/contact"
                 >
                   <span>Contact</span>
                 </Link>
               </li>
+              <li role="none" className="flex items-stretch">
+                <Link
+                  onClick={accHndle}
+                  className="flex items-center py-4 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer relative group"
+                >
+                  Account
+                  <GoChevronDown size={20} />
+                  <ul
+                    className={`absolute top-full bg-white shadow-lg w-32 py-3 rounded-md flex flex-col border-t-4 border-red-600 group-hover:opacity-100 ${
+                      active ? "group-hover:flex visible" : "hidden invisible"
+                    } cursor-default`}
+                  >
+                    <Link
+                      to={"/signup"}
+                      className="text-sm text-gray-600 hover:text-blue-500 hover:bg-slate-200 transition-all duration-300 py-1.5 px-2 lg:px-4"
+                    >
+                      Sign Up
+                    </Link>
+                    <Link
+                      to={"/login"}
+                      className="text-sm text-gray-600 hover:text-blue-500 hover:bg-slate-200 transition-all duration-300 py-1.5 px-2 lg:px-4"
+                    >
+                      Login
+                    </Link>
+                  </ul>
+                </Link>
+              </li>
+
               <div className="flex items-center lg:ml-4">
                 <li>
                   <Link
