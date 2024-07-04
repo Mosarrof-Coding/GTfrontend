@@ -69,7 +69,7 @@ export default function TestimonialPage() {
             {data.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-slide">
                 <div className="mx-auto px-4">
-                  <div className="max-w-12 mx-auto mb-4 rounded-md overflow-hidden">
+                  <div className="max-w-16 mx-auto mb-1 rounded-md overflow-hidden">
                     <img
                       src={`${import.meta.env.VITE_APP_URL}${
                         testimonial.attributes.medel.data[0].attributes.url
@@ -77,6 +77,10 @@ export default function TestimonialPage() {
                       alt=""
                     />
                   </div>
+                  <h6 className="font-bold text-indigo-600 mb-4 text-center">
+                    <span className="text-sm text-black">Award:</span>{" "}
+                    {testimonial.attributes.win}
+                  </h6>
                   <p className="text-center font-light text-gray-600">
                     {testimonial.attributes.description}
                   </p>
