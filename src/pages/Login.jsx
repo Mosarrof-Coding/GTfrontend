@@ -146,7 +146,7 @@ export default function Login() {
                 If no account, click{" "}
                 <strong>
                   <Link to={"/signup"} className=" text-blue-600">
-                    here
+                    Here
                   </Link>
                 </strong>{" "}
                 for registration.
