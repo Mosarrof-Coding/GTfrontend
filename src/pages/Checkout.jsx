@@ -18,7 +18,7 @@ export default function Checkout() {
               </h1>
             </header>
 
-            <form className="mt-8 w-full mx-auto">
+            <div className="mt-8 w-full mx-auto">
               {cart.length !== 0 ? (
                 cart.map(
                   (item, index) =>
@@ -94,186 +94,46 @@ export default function Checkout() {
                                 </dd>
                               </div>
                             </dl>
-                            {/* payment */}
-                            <div className="block pt-8">
-                              <h4 className="text-xl mb-4 font-medium tex-black">
-                                Payments:
-                              </h4>
-                              <div className="grid grid-cols-6 gap-6">
-                                <div className="col-span-6 sm:col-span-3">
-                                  <label
-                                    htmlFor="Name"
-                                    className="block text-sm font-medium text-gray-700"
-                                  >
-                                    Name
-                                  </label>
 
-                                  <input
-                                    type="text"
-                                    id="Name"
-                                    name="Name"
-                                    className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 capitalize shadow-sm"
-                                  />
-                                </div>
-                                <div className="col-span-6 sm:col-span-3">
-                                  <label
-                                    htmlFor="Phone"
-                                    className="block text-sm font-medium text-gray-700"
-                                  >
-                                    Phone
-                                  </label>
+                            <div className="flex justify-end">
+                              <span className="inline-flex items-center justify-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-indigo-700">
+                                <p className="whitespace-nowrap text-xs">
+                                  {Math.floor(item.attributes.Price * 0.1) !==
+                                  0 ? (
+                                    <p className="flex items-center">
+                                      <span>
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="none"
+                                          viewBox="0 0 24 24"
+                                          strokeWidth="1.5"
+                                          stroke="currentColor"
+                                          className="-ms-1 me-1.5 h-4 w-4"
+                                        >
+                                          <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
+                                          />
+                                        </svg>
+                                      </span>
+                                      <span>Discounts Applied</span>
+                                    </p>
+                                  ) : (
+                                    ""
+                                  )}
+                                </p>
+                              </span>
+                            </div>
 
-                                  <input
-                                    type="tel"
-                                    id="Phone"
-                                    name="Phone"
-                                    className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
-                                  />
-                                </div>
-
-                                <div className="col-span-6">
-                                  <label
-                                    htmlFor="Email"
-                                    className="block text-sm font-medium text-gray-700"
-                                  >
-                                    Email
-                                  </label>
-
-                                  <input
-                                    type="email"
-                                    id="Email"
-                                    name="email"
-                                    className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
-                                  />
-                                </div>
-                              </div>
-                              {/* method */}
-                              <div className="col-span-12 py-6 flex gap-4 items-centerc flex-wrap">
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="cash"
-                                    name="payment"
-                                    className=""
-                                  />
-                                  <label
-                                    htmlFor="cash"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    Cash
-                                  </label>
-                                </div>
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="debit"
-                                    name="payment"
-                                    className=""
-                                    defaultChecked
-                                  />
-                                  <label
-                                    htmlFor="debit"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    Debit Card
-                                  </label>
-                                </div>
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="master"
-                                    name="payment"
-                                    className=""
-                                  />
-                                  <label
-                                    htmlFor="master"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    Master Card
-                                  </label>
-                                </div>
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="credit"
-                                    name="payment"
-                                    className=""
-                                  />
-                                  <label
-                                    htmlFor="credit"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    Credit Card
-                                  </label>
-                                </div>
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="paypal"
-                                    name="payment"
-                                    className=""
-                                  />
-                                  <label
-                                    htmlFor="paypal"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    PayPal
-                                  </label>
-                                </div>
-                                <div className="radogrup flex gap-2 items-center">
-                                  <input
-                                    type="radio"
-                                    id="applepay"
-                                    name="payment"
-                                    className=""
-                                  />
-                                  <label
-                                    htmlFor="applepay"
-                                    className="block font-medium text-gray-700"
-                                  >
-                                    Apple Pay
-                                  </label>
-                                </div>
-                              </div>
-                              <div className="flex justify-end mb-1">
-                                <span className="inline-flex items-center justify-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-indigo-700">
-                                  <p className="whitespace-nowrap text-xs">
-                                    {Math.floor(item.attributes.Price * 0.1) !==
-                                    0 ? (
-                                      <p className="flex items-center">
-                                        <span>
-                                          <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth="1.5"
-                                            stroke="currentColor"
-                                            className="-ms-1 me-1.5 h-4 w-4"
-                                          >
-                                            <path
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                              d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
-                                            />
-                                          </svg>
-                                        </span>
-                                        <span>Discounts Applied</span>
-                                      </p>
-                                    ) : (
-                                      ""
-                                    )}
-                                  </p>
-                                </span>
-                              </div>
-                              <div className="flex justify-end">
-                                <Link
-                                  to={"/thankU"}
-                                  onClick={handleCheckout}
-                                  className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
-                                >
-                                  Confirm Order
-                                </Link>
-                              </div>
+                            <div className="flex justify-end">
+                              <Link
+                                to={"/thankU"}
+                                onClick={handleCheckout}
+                                className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+                              >
+                                Confirm Order
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -282,13 +142,10 @@ export default function Checkout() {
                 )
               ) : (
                 <h2 className="text-xl font-medium text-red-600 text-center">
-                  Ops...!{" "}
-                  <span className="text-yellow-400">
-                    no Product Available in your Cart 🛒
-                  </span>
+                  No Service Available in Cart 🛒
                 </h2>
               )}
-            </form>
+            </div>
           </div>
         </div>
       </section>
