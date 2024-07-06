@@ -27,7 +27,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const url = `http://localhost:1337/api/auth/local`;
+      const url = `${import.meta.env.VITE_APP_URL}/api/auth/local`;
       if (user.identifier && user.password) {
         const res = await axios.post(url, {
           identifier: user.identifier,
@@ -79,17 +79,13 @@ export default function Login() {
           },
         }}
       />
-      <div className="container">
-        <div className="flex items-center justify-center lg:col-span-7 xl:col-span-6">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="flex items-center justify-center">
           <div className="w-full sm:w-[576px]">
-            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Login
             </h1>
-            <form
-              action="#"
-              className="mt-8 min-w-full flex flex-col gap-4"
-              onSubmit={handleLogin}
-            >
+            <form className="mt-8 flex flex-col gap-4" onSubmit={handleLogin}>
               <div>
                 <label
                   htmlFor="identifier"
@@ -105,12 +101,13 @@ export default function Login() {
                   className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                   value={user.identifier}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div>
                 <label
                   htmlFor="password"
-                  className="block mb-1 text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700"
                 >
                   Password
                 </label>
@@ -123,9 +120,13 @@ export default function Login() {
                     className="py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                     value={user.password}
                     onChange={handleChange}
+                    required
                   />
-                  <div className="absolute right-0 top-0 min-h-full w-6 flex items-center">
-                    <span className="view cursor-pointer" onClick={eyeChange}>
+                  <div className="absolute right-0 top-0 h-full flex items-center">
+                    <span
+                      className="view cursor-pointer h-full flex items-center px-2"
+                      onClick={eyeChange}
+                    >
                       {eye ? (
                         <FaRegEyeSlash size={18} />
                       ) : (
@@ -135,32 +136,36 @@ export default function Login() {
                   </div>
                 </div>
               </div>
-              <p className="text-right">Forgot Password?</p>
+              <p className="text-right text-sm">
+                <Link to="#" className="text-blue-600">
+                  Forgot Password?
+                </Link>
+              </p>
               <button
                 type="submit"
-                className="inline-block rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                className="inline-block w-full py-3 px-4 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
               >
                 Login
               </button>
-              <p className="my-2">
+              <p className="my-2 text-sm text-center">
                 If no account, click{" "}
                 <strong>
-                  <Link to={"/signup"} className=" text-blue-600">
+                  <Link to="/signup" className="text-blue-600">
                     Here
                   </Link>
                 </strong>{" "}
                 for registration.
               </p>
-              <div className="w-full flex flex-col gap-4 mt-6 justify-center">
-                <p>Or login using</p>
+              <div className="w-full flex flex-col gap-4 mt-6">
+                <p className="text-sm">Or login using</p>
                 <div className="flex gap-2">
-                  <span className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 to-purple-500 flex items-center justify-center text-white">
+                  <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-red-500 to-purple-500 text-white">
                     <FaFacebookF size={18} />
                   </span>
-                  <span className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 to-purple-500 flex items-center justify-center text-white">
+                  <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-red-500 to-purple-500 text-white">
                     <FaTwitter size={18} />
                   </span>
-                  <span className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 to-purple-500 flex items-center justify-center text-white">
+                  <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-red-500 to-purple-500 text-white">
                     <FaGoogle size={18} />
                   </span>
                 </div>

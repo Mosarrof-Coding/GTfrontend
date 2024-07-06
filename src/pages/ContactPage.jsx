@@ -10,6 +10,7 @@ export default function ContactPage() {
     phone: "",
     message: "",
   });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -20,7 +21,6 @@ export default function ContactPage() {
 
   const postContactData = (e) => {
     e.preventDefault();
-    console.log("formdata", formData);
     const contactData = {
       data: {
         name: formData.name,
@@ -44,17 +44,17 @@ export default function ContactPage() {
             phone: "",
             message: "",
           });
-          toast.success("Form Submited Successfully");
+          toast.success("Form Submitted Successfully");
         }
       })
       .catch(function (error) {
-        toast.error("Somethong went wrong! Please try again.");
+        toast.error("Something went wrong! Please try again.");
         console.error(error);
       });
   };
 
   return (
-    <section className="section bg-gray-100">
+    <section className="section bg-gray-100 py-8 md:py-12 lg:py-16">
       <Toaster
         position="top-center"
         reverseOrder={false}
@@ -62,15 +62,12 @@ export default function ContactPage() {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          // Define default options
           className: "",
           duration: 5000,
           style: {
             background: "#363636",
             color: "#fff",
           },
-
-          // Default options for specific types
           success: {
             duration: 3000,
             theme: {
@@ -81,41 +78,44 @@ export default function ContactPage() {
         }}
       />
 
-      <div className="container">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
-            <h2 className="text-3xl font-bold sm:text-4xl mb-8">Contact Us</h2>
-            <p className="max-w-xl text-lg">
-              Have Questions About Your Golf Game? We're Here to Help.Reach Out
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
+              Contact Us
+            </h2>
+            <p className="max-w-xl text-base sm:text-lg">
+              Have Questions About Your Golf Game? We're Here to Help. Reach Out
               to Our Golf Experts for Assistance and Support.
             </p>
             <div className="mt-8">
-              <a href="#" className="text-2xl font-bold text-pink-600">
+              <a
+                href="#"
+                className="text-xl sm:text-2xl font-bold text-pink-600"
+              >
                 0151 475 4450
               </a>
-
-              <address className="mt-2 not-italic">
+              <address className="block mt-2 text-base sm:text-lg not-italic">
                 282 Kevin Brook, Imogeneborough, CA 58517
               </address>
             </div>
           </div>
 
-          {/* form  */}
           <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-            <form action="#" className="space-y-4" onSubmit={postContactData}>
+            <form className="space-y-4" onSubmit={postContactData}>
               <div>
                 <label className="sr-only" htmlFor="name">
                   Name
                 </label>
                 <input
-                  className="w-full rounded-lg border border-gray-200 outline-green-200 p-3 text-sm"
-                  placeholder="Name"
                   type="text"
                   id="name"
                   name="name"
-                  required
+                  placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
+                  className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                  required
                 />
               </div>
 
@@ -125,14 +125,14 @@ export default function ContactPage() {
                     Email
                   </label>
                   <input
-                    className="w-full rounded-lg border border-gray-200 outline-green-200 p-3 text-sm"
-                    placeholder="Email address"
                     type="email"
                     id="email"
                     name="email"
-                    required
+                    placeholder="Email Address"
                     value={formData.email}
                     onChange={handleChange}
+                    className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                    required
                   />
                 </div>
 
@@ -141,35 +141,37 @@ export default function ContactPage() {
                     Phone
                   </label>
                   <input
-                    className="w-full rounded-lg border border-gray-200 outline-green-200 p-3 text-sm"
-                    placeholder="Phone Number"
                     type="tel"
                     id="phone"
                     name="phone"
-                    required
+                    placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
+                    className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                    required
                   />
                 </div>
               </div>
+
               <div>
                 <label className="sr-only" htmlFor="message">
                   Message
                 </label>
                 <textarea
-                  className="w-full rounded-lg border border-gray-200 outline-green-200 p-3 text-sm"
-                  placeholder="Message"
-                  rows="8"
                   id="message"
                   name="message"
+                  rows="8"
+                  placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
+                  className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                 ></textarea>
               </div>
-              <div className="mt-4">
+
+              <div>
                 <button
                   type="submit"
-                  className="inline-block w-full rounded-lg bg-red-600 hover:bg-red-700 px-5 py-3 font-medium text-white sm:w-auto"
+                  className="w-full py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
                 >
                   Send Enquiry
                 </button>

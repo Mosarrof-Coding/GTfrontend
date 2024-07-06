@@ -26,7 +26,7 @@ export default function SignPage() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const url = `http://localhost:1337/api/auth/local/register`;
+      const url = `${import.meta.env.VITE_APP_URL}/api/auth/local/register`;
       if (user.name && user.email && user.password) {
         const res = await axios.post(url, {
           username: user.name,
@@ -68,25 +68,23 @@ export default function SignPage() {
           },
         }}
       />
-      <div className="container">
-        <div className="flex items-center justify-center lg:col-span-7 xl:col-span-6">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="flex items-center justify-center">
           <div className="max-w-xl lg:max-w-3xl">
-            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Create an account
             </h1>
             <form
-              action="#"
-              className="mt-8 grid grid-cols-6 gap-6"
+              className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-6"
               onSubmit={handleSignUp}
             >
-              <div className="col-span-6">
+              <div className="col-span-6 sm:col-span-4">
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Name
                 </label>
-
                 <input
                   type="text"
                   id="name"
@@ -94,17 +92,17 @@ export default function SignPage() {
                   className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                   value={user.name}
                   onChange={handleUser}
+                  required
                 />
               </div>
 
-              <div className="col-span-6">
+              <div className="col-span-6 sm:col-span-4">
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email{" "}
+                  Email
                 </label>
-
                 <input
                   type="email"
                   id="email"
@@ -112,13 +110,14 @@ export default function SignPage() {
                   className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                   value={user.email}
                   onChange={handleUser}
+                  required
                 />
               </div>
 
-              <div className="col-span-6">
+              <div className="col-span-6 sm:col-span-4">
                 <label
                   htmlFor="password"
-                  className="block mb-1 text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700"
                 >
                   Password
                 </label>
@@ -131,6 +130,7 @@ export default function SignPage() {
                     className="py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                     value={user.password}
                     onChange={handleUser}
+                    required
                   />
                   <div className="absolute right-0 top-0 min-h-full w-6 flex items-center">
                     <span className="view cursor-pointer" onClick={eyeChange}>
@@ -144,15 +144,18 @@ export default function SignPage() {
                 </div>
               </div>
 
-              <div className="col-span-6">
-                <label htmlFor="marketingAccept" className="flex gap-4">
+              <div className="col-span-6 sm:col-span-4">
+                <label
+                  htmlFor="marketingAccept"
+                  className="flex items-center gap-2 text-sm text-gray-700"
+                >
                   <input
                     type="checkbox"
                     id="marketingAccept"
                     name="marketing_accept"
-                    className="size-5 rounded-md bg-white shadow-sm"
+                    className="rounded-md bg-white shadow-sm"
                   />
-                  <span className="text-sm text-gray-700">
+                  <span>
                     I want to receive emails about events, product updates, and
                     company announcements.
                   </span>
@@ -162,25 +165,28 @@ export default function SignPage() {
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
                   By creating an account, you agree to our
-                  <a href="#" className="text-gray-700 underline">
+                  <Link to="#" className="text-blue-600 underline">
                     {" "}
                     terms and conditions{" "}
-                  </a>
+                  </Link>
                   and
-                  <a href="#" className="text-gray-700 underline">
+                  <Link to="#" className="text-blue-600 underline">
                     privacy policy
-                  </a>
+                  </Link>
                 </p>
               </div>
 
-              <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+              <div className="col-span-6 sm:flex sm:items-center sm:justify-between">
+                <button
+                  type="submit"
+                  className="inline-block w-full sm:w-auto py-3 px-4 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                >
                   Create an account
                 </button>
 
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   Already have an account?
-                  <Link to="/login" className="text-gray-700 underline">
+                  <Link to="/login" className="ml-2 text-blue-600 underline">
                     Log in
                   </Link>
                 </p>

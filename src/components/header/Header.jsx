@@ -16,11 +16,11 @@ export default function Header() {
     <header className="">
       <div className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
         <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
-          <nav className="flex py-2 items-stretch justify-between font-medium text-slate-700">
+          <nav className="flex py-0 md:py-1 lg:py-2 items-stretch justify-between font-medium text-slate-700">
             {/* <!-- Brand logo --> */}
             <div>
               <Link
-                className="flex items-center gap-1 whitespace-nowrap py-3 text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
+                className="flex items-center gap-1 whitespace-nowrap py-3 text-xl md:text-2xl lg:text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
                 to="/"
               >
                 <span className="">G🏐LF</span>

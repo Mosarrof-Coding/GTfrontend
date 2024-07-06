@@ -33,53 +33,56 @@ export default function PriceCard() {
 
   return (
     <>
-      <section className="section">
-        <div className="container">
-          <div className="heading text-center max-w-[560px] mx-auto pb-8">
-            <h2 className="text-2xl font-semibold my-2">Our Services</h2>
-            <h3 className="text-xl font-medium text-gray-600">
+      <section className="section py-8 md:py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="heading max-w-[560px] mx-auto pb-8 text-center">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
+              Our Services
+            </h2>
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600">
               Dive into our membership tiers designed to match your golfing
               lifestyle. Whether you're looking for casual access to fully
               commit.
             </h3>
           </div>
+
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch lg:grid-cols-3 md:gap-8">
             {data.map((datam) => (
               <div
                 key={datam.id}
                 className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm"
               >
-                <div className="p-6 sm:px-8">
-                  <h2 className="text-lg font-medium text-gray-900">
+                <div className="p-6 sm:px-8 text-left">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900">
                     {datam.attributes.Package_type}
                     <span className="sr-only">Plan</span>
                   </h2>
 
-                  <p className="mt-2 text-gray-700">
+                  <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-700">
                     {datam.attributes.Service_name}
                   </p>
 
                   <p className="mt-2 sm:mt-4">
-                    <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                    <strong className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                       {datam.attributes.Price}$
                     </strong>
 
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm sm:text-base font-medium text-gray-700">
                       /year
                     </span>
                   </p>
 
                   <button
                     type="button"
-                    className="mt-4 block rounded border border-red-600 bg-red-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none sm:mt-6 cursor-pointer"
+                    className="mt-4 w-full sm:w-auto rounded border border-red-600 bg-red-600 px-6 py-3 text-center text-sm sm:text-base md:text-lg font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:mt-6 cursor-pointer"
                     onClick={() => addToCart(datam)}
                   >
                     Get Started
                   </button>
                 </div>
 
-                <div className="p-6 sm:px-8">
-                  <p className="text-lg font-medium text-gray-900 sm:text-xl">
+                <div className="p-6 sm:px-8 text-left">
+                  <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900">
                     What's included:
                   </p>
 
@@ -101,7 +104,9 @@ export default function PriceCard() {
                               d="M4.5 12.75l6 6 9-13.5"
                             />
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-sm sm:text-base md:text-lg text-gray-700">
+                            {feature}
+                          </span>
                         </li>
                       )
                     )}

@@ -55,21 +55,24 @@ export default function TestimonialPage() {
   };
 
   return (
-    <section className="section">
-      <div className="container">
+    <section className="section py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
-          <h2 className="text-2xl font-semibold my-2">Testimonials</h2>
-          <h3 className="text-xl font-medium text-gray-600">
-            Swinging Success Stories on the Green.Discover the passion and
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
+            Testimonials
+          </h2>
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-600">
+            Swinging Success Stories on the Green. Discover the passion and
             dedication that drives our golf community forward.
           </h3>
         </div>
-        <div className="max-w-[1220px] mx-auto">
+
+        <div className="max-w-[1120px] mx-auto">
           <Slider {...sliderSettings}>
             {data.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-slide">
                 <div className="mx-auto px-4">
-                  <div className="max-w-16 mx-auto mb-1 rounded-md overflow-hidden">
+                  <div className="max-w-14 mx-auto mb-1 rounded-md overflow-hidden">
                     <img
                       src={`${import.meta.env.VITE_APP_URL}${
                         testimonial.attributes.medel.data[0].attributes.url
@@ -77,11 +80,11 @@ export default function TestimonialPage() {
                       alt=""
                     />
                   </div>
-                  <h6 className="font-bold text-indigo-600 mb-4 text-center">
+                  <h6 className="font-bold text-indigo-600 mb-4 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
                     <span className="text-sm text-black">Award:</span>{" "}
                     {testimonial.attributes.win}
                   </h6>
-                  <p className="text-center font-light text-gray-600">
+                  <p className="text-center font-light text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl">
                     {testimonial.attributes.description}
                   </p>
                   <div className="flex items-center gap-4 max-w-fit mx-auto my-6">
@@ -94,10 +97,10 @@ export default function TestimonialPage() {
                       />
                     </div>
                     <ul className="max-w-fit">
-                      <h5 className="text-indigo-800 font-semibold text-xl">
+                      <h5 className="text-indigo-800 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl">
                         {testimonial.attributes.AvName}
                       </h5>
-                      <h6 className="text-gray-400 text-base">
+                      <h6 className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl">
                         {testimonial.attributes.AvDesig}
                       </h6>
                     </ul>

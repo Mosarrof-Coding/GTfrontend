@@ -13,7 +13,7 @@ export default function Footer() {
                 aria-labelledby="footer-header"
               >
                 <Link
-                  className="mb-6 whitespace-nowrap text-2xl leading-6 text-[#DC2626] font-black"
+                  className="mb-6 whitespace-nowrap text-lg md:text-xl lg:text-2xl leading-6 text-[#DC2626] font-black"
                   to="/"
                 >
                   <span className="pb-6 inline-block">G🏐LF</span>
