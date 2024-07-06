@@ -134,7 +134,7 @@ export default function Header() {
                   <ul
                     className={`absolute top-full bg-white shadow-lg w-32 py-3 rounded-md flex flex-col border-t-4 border-red-600 group-hover:opacity-100 ${
                       active ? "group-hover:flex visible" : "hidden invisible"
-                    } cursor-default`}
+                    } cursor-default z-30`}
                   >
                     <Link
                       to={"/signup"}
