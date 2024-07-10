@@ -25,22 +25,25 @@ export default function Checkout() {
   const handleCheckout = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:1337/api/orders", {
-        data: {
-          items: cart.map((item) => ({
-            id: item.id,
-            packageType: item.attributes.Package_type,
-            serviceName: item.attributes.Service_name,
-            features: item.attributes.Features.split("\n"),
-            price: item.attributes.Price,
-          })),
-          total: cart.reduce((acc, item) => acc + item.attributes.Price, 0),
-          name: customerDetails.name,
-          phone: customerDetails.phone,
-          email: customerDetails.email,
-          paymentMethod: customerDetails.paymentMethod,
-        },
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_APP_URL}/api/orders`,
+        {
+          data: {
+            items: cart.map((item) => ({
+              id: item.id,
+              packageType: item.attributes.Package_type,
+              serviceName: item.attributes.Service_name,
+              features: item.attributes.Features.split("\n"),
+              price: item.attributes.Price,
+            })),
+            total: cart.reduce((acc, item) => acc + item.attributes.Price, 0),
+            name: customerDetails.name,
+            phone: customerDetails.phone,
+            email: customerDetails.email,
+            paymentMethod: customerDetails.paymentMethod,
+          },
+        }
+      );
       if (response.status === 200) {
         setCart([]);
         toast.success("Order placed successfully!");
