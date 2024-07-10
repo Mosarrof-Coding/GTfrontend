@@ -10,7 +10,7 @@ export default function BlogCard({ blog }) {
             alt=""
             src={
               `${import.meta.env.VITE_APP_URL}` +
-              blog.attributes.image.data[0].attributes.url
+              blog.attributes.image?.data[0].attributes.url
             }
             className="my-0"
           />
