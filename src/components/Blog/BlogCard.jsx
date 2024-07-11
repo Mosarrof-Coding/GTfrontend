@@ -12,7 +12,7 @@ export default function BlogCard({ blog }) {
               `${import.meta.env.VITE_APP_URL}` +
               blog.attributes.image?.data[0].attributes.url
             }
-            className="my-0"
+            className="my-0 max-h-[305px]"
           />
         </div>
 
