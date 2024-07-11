@@ -22,7 +22,8 @@ export default function Checkout() {
     }));
   };
 
-  const handleCheckout = async () => {
+  const handleCheckout = async (e) => {
+    e.preventDefault();
     setIsLoading(true);
     try {
       const response = await axios.post(
@@ -60,7 +61,28 @@ export default function Checkout() {
   return (
     <>
       <section className="section">
-        <Toaster position="top-center" reverseOrder={false} />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          containerClassName=""
+          containerStyle={{}}
+          toastOptions={{
+            className: "",
+            duration: 5000,
+            style: {
+              background: "#363636",
+              color: "#fff",
+            },
+            success: {
+              duration: 3000,
+              theme: {
+                primary: "green",
+                secondary: "black",
+              },
+            },
+          }}
+        />
         <div className="container">
           <div className="max-w-[800px] mx-auto">
             <header className="text-center">
@@ -69,7 +91,7 @@ export default function Checkout() {
               </h1>
             </header>
 
-            <form className="mt-8 w-full mx-auto">
+            <form className="mt-8 w-full mx-auto" onSubmit={handleCheckout}>
               {cart.length !== 0 ? (
                 cart.map((item) => (
                   <ul className="" key={item.id}>
@@ -156,6 +178,7 @@ export default function Checkout() {
                                 name="name"
                                 value={customerDetails.name}
                                 onChange={handleInputChange}
+                                required
                                 className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 capitalize shadow-sm"
                               />
                             </div>
@@ -173,6 +196,7 @@ export default function Checkout() {
                                 name="phone"
                                 value={customerDetails.phone}
                                 onChange={handleInputChange}
+                                required
                                 className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
                               />
                             </div>
@@ -191,6 +215,7 @@ export default function Checkout() {
                                 name="email"
                                 value={customerDetails.email}
                                 onChange={handleInputChange}
+                                required
                                 className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
                               />
                             </div>
@@ -308,7 +333,7 @@ export default function Checkout() {
                             </div>
                           </div>
                           <button
-                            onClick={handleCheckout}
+                            type="submit"
                             disabled={isLoading}
                             className="group w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                           >
