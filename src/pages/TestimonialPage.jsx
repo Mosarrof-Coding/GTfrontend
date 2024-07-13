@@ -73,12 +73,12 @@ export default function TestimonialPage() {
               <div key={testimonial.id} className="testimonial-slide">
                 <div className="mx-auto px-4">
                   <div className="max-w-14 mx-auto mb-1 rounded-md overflow-hidden">
-                    <img
+                    {/* <img
                       src={`${import.meta.env.VITE_APP_URL}${
                         testimonial.attributes.medel.data[0].attributes.url
                       }`}
                       alt=""
-                    />
+                    /> */}
                   </div>
                   <h6 className="font-bold text-indigo-600 mb-4 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
                     <span className="text-sm text-black">Award:</span>{" "}
@@ -89,12 +89,12 @@ export default function TestimonialPage() {
                   </p>
                   <div className="flex items-center gap-4 max-w-fit mx-auto my-6">
                     <div className="max-w-16 rounded-md overflow-hidden">
-                      <img
+                      {/* <img
                         src={`${import.meta.env.VITE_APP_URL}${
                           testimonial.attributes.image.data[0].attributes.url
                         }`}
                         alt=""
-                      />
+                      /> */}
                     </div>
                     <ul className="max-w-fit">
                       <h5 className="text-indigo-800 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl">

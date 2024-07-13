@@ -6,14 +6,14 @@ export default function BlogCard({ blog }) {
     <>
       <article className="h-full overflow-hidden rounded-lg shadow transition hover:shadow-lg">
         <div>
-          <img
+          {/* <img
             alt=""
             src={
               `${import.meta.env.VITE_APP_URL}` +
               blog.attributes.image?.data[0].attributes.url
             }
             className="my-0 max-h-[305px]"
-          />
+          /> */}
         </div>
 
         <div className="bg-white px-4 sm:p-6">
