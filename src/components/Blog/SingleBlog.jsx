@@ -36,14 +36,14 @@ export default function SingleBlog() {
               {blog.attributes.Title}
             </h2>
             <div className="bg-purple-200">
-              <img
+              {/* <img
                 className="w-full h-auto"
                 src={
                   `${import.meta.env.VITE_APP_URL}` +
                   blog.attributes.image.data[0].attributes.url
                 }
                 alt=""
-              />
+              /> */}
             </div>
             <div className="blogEtc">
               <h4>
