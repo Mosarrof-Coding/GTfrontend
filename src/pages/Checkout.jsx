@@ -12,6 +12,7 @@ export default function Checkout() {
     phone: "",
     email: "",
     paymentMethod: "debit",
+    total: "",
   });
 
   const handleInputChange = (e) => {
@@ -37,11 +38,11 @@ export default function Checkout() {
               features: item.attributes.Features.split("\n"),
               price: item.attributes.Price,
             })),
-            total: cart.reduce((acc, item) => acc + item.attributes.Price, 0),
             name: customerDetails.name,
             phone: customerDetails.phone,
             email: customerDetails.email,
             paymentMethod: customerDetails.paymentMethod,
+            total: cart.reduce((acc, item) => acc + item.attributes.Price, 0),
           },
         }
       );

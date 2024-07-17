@@ -85,7 +85,7 @@ export default function TestimonialPage() {
                     {testimonial.attributes.win}
                   </h6>
                   <p className="text-center font-light text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl">
-                    {testimonial.attributes.description}
+                    {testimonial.attributes.Description}
                   </p>
                   <div className="flex items-center gap-4 max-w-fit mx-auto my-6">
                     <div className="max-w-16 rounded-md overflow-hidden">
