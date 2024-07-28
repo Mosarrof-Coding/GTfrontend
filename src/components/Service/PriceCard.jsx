@@ -34,7 +34,7 @@ export default function PriceCard() {
   return (
     <>
       <section className="section py-8 md:py-12 lg:py-16">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="container">
           <div className="heading max-w-[560px] mx-auto pb-8 text-center">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
               Our Services
@@ -52,7 +52,7 @@ export default function PriceCard() {
                 key={datam.id}
                 className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm"
               >
-                <div className="p-6 sm:px-8 text-left">
+                <div className="p-4 md:p-6  text-left">
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900">
                     {datam.attributes.Package_type}
                     <span className="sr-only">Plan</span>
@@ -74,14 +74,14 @@ export default function PriceCard() {
 
                   <button
                     type="button"
-                    className="mt-4 w-full sm:w-auto rounded border border-red-600 bg-red-600 px-6 py-3 text-center text-sm sm:text-base md:text-lg font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:mt-6 cursor-pointer"
+                    className="mt-4 w-full sm:w-auto rounded border border-red-600 bg-red-600 px-6 py-2 md:py-3 text-center text-sm sm:text-base md:text-lg font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:mt-6 cursor-pointer"
                     onClick={() => addToCart(datam)}
                   >
                     Get Started
                   </button>
                 </div>
 
-                <div className="p-6 sm:px-8 text-left">
+                <div className="p-4 md:p-6  text-left">
                   <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900">
                     What's included:
                   </p>

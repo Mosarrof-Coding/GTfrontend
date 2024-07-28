@@ -55,8 +55,8 @@ export default function TestimonialPage() {
   };
 
   return (
-    <section className="section py-8 md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <section className="section py-8 md:py-12 lg:py-16 overflow-x-hidden">
+      <div className="container">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
             Testimonials

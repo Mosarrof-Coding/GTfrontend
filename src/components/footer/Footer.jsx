@@ -6,7 +6,7 @@ export default function Footer() {
     <>
       <footer className="w-full text-slate-500">
         <div className="border-t border-slate-200 bg-slate-100 py-12 text-base">
-          <div className="container mx-auto px-6">
+          <div className="container">
             <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <div
                 className="col-span-4 md:col-span-8 lg:col-span-4"
@@ -18,14 +18,18 @@ export default function Footer() {
                 >
                   <span className="pb-6 inline-block">G🏐LF</span>
                 </Link>
-                <p>
+                <p className="hidden md:block">
                   Expertly made, responsive, accessible components in React and
                   HTML ready to be used on your website or app. Just copy and
                   paste them on your Tailwind CSS project.
                 </p>
+                <p className="block md:hidden">
+                  Expertly made, responsive, accessible components in React and
+                  HTML ready to be used on your website or app.
+                </p>
               </div>
               <nav
-                className="col-span-2 md:col-span-4 lg:col-span-2"
+                className="col-span-2 md:col-span-4 lg:col-span-2 hidden md:block"
                 aria-labelledby="footer-product-5-logo"
               >
                 <h3
@@ -70,7 +74,7 @@ export default function Footer() {
                 </ul>
               </nav>
               <nav
-                className="col-span-2 md:col-span-4 lg:col-span-2"
+                className="col-span-2 md:col-span-4 lg:col-span-2 hidden md:block"
                 aria-labelledby="footer-docs-5-logo"
               >
                 <h3

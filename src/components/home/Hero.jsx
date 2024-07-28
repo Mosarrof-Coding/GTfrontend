@@ -22,13 +22,13 @@ export default function Hero() {
           <div className="mt-12 md:mt-16 flex flex-wrap justify-center gap-4">
             <Link
               to=""
-              className="block w-full rounded bg-red-600 px-8 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+              className="block w-full rounded bg-red-600 px-8 py-2 md:py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
             >
               Get Started
             </Link>
 
             <Link
-              className="block w-full rounded px-8 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+              className="block w-full rounded px-8 py-2 md:py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
               to=""
             >
               Learn More

@@ -78,7 +78,7 @@ export default function ContactPage() {
         }}
       />
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="container">
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
@@ -101,7 +101,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+          <div className="rounded-lg md:bg-white md:p-8 md:shadow-lg lg:col-span-3 lg:p-12">
             <form className="space-y-4" onSubmit={postContactData}>
               <div>
                 <label className="sr-only" htmlFor="name">
@@ -171,7 +171,7 @@ export default function ContactPage() {
               <div>
                 <button
                   type="submit"
-                  className="w-full py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
+                  className="w-full py-2 md:py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
                 >
                   Send Enquiry
                 </button>

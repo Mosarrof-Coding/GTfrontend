@@ -79,7 +79,7 @@ export default function Login() {
           },
         }}
       />
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="container">
         <div className="flex items-center justify-center">
           <div className="w-full sm:w-[576px]">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
