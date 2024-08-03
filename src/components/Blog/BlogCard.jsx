@@ -7,11 +7,8 @@ export default function BlogCard({ blog }) {
       <article className="h-full overflow-hidden rounded-lg shadow transition hover:shadow-lg">
         <div>
           <img
-            alt=""
-            src={
-              `${import.meta.env.VITE_APP_URL}` +
-              blog.attributes.image.data.attributes.url
-            }
+            src={`https://res.cloudinary.com/dokkpior6/image/upload/${blog.attributes.image.data.attributes.url}`}
+            alt="blog"
             className="my-0 max-h-[305px]"
           />
         </div>

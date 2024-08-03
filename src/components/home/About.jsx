@@ -4,9 +4,9 @@ import gAboutImg from "../../assets/gAbout.jpg";
 export default function About() {
   return (
     <section className="section bg-gray-100 py-8 md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 place-items-center">
-          <div className="w-full overflow-hidden rounded-lg lg:order-last">
+          <div className="w-full overflow-hidden rounded-lg order-1 lg:order-2">
             <img
               alt="About us"
               src={gAboutImg}

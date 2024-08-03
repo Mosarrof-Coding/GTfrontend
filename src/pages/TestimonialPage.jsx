@@ -74,10 +74,9 @@ export default function TestimonialPage() {
                 <div className="mx-auto px-4">
                   <div className="max-w-14 mx-auto mb-1 rounded-md overflow-hidden">
                     <img
-                      src={`${import.meta.env.VITE_APP_URL}${
-                        testimonial.attributes.medel.data.attributes.url
-                      }`}
-                      alt=""
+                      src={`https://res.cloudinary.com/dokkpior6/image/upload/${testimonial.attributes.medel.data.attributes.url}`}
+                      alt="medel"
+                      className="w-full h-auto"
                     />
                   </div>
                   <h6 className="font-bold text-indigo-600 mb-4 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
@@ -90,10 +89,9 @@ export default function TestimonialPage() {
                   <div className="flex items-center gap-4 max-w-fit mx-auto my-6">
                     <div className="max-w-16 rounded-md overflow-hidden">
                       <img
-                        src={`${import.meta.env.VITE_APP_URL}${
-                          testimonial.attributes.image.data[0].attributes.url
-                        }`}
-                        alt=""
+                        src={`https://res.cloudinary.com/dokkpior6/image/upload/${testimonial.attributes.image.data[0].attributes.url}`}
+                        alt={testimonial.attributes.AvName}
+                        className="w-full h-auto"
                       />
                     </div>
                     <ul className="max-w-fit">

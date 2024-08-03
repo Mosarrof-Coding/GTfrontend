@@ -24,6 +24,11 @@ export default function SingleBlog() {
       </div>
     );
 
+  // Construct the Cloudinary image URL
+  const imageUrl = `${import.meta.env.VITE_CLOUDINARY_URL}/${
+    blog.attributes.image.data.attributes.url
+  }`;
+
   return (
     <section className="section prose-sm">
       <div className="container">
@@ -38,22 +43,20 @@ export default function SingleBlog() {
             <div className="bg-purple-200">
               <img
                 className="w-full h-auto"
-                src={
-                  `${import.meta.env.VITE_APP_URL}` +
-                  blog.attributes.image.data.attributes.url
-                }
-                alt=""
+                src={imageUrl} // Use constructed Cloudinary image URL here
+                alt={blog.attributes.Title || "Blog Image"} // Use blog title for alt text
               />
             </div>
             <div className="blogEtc">
               <h4>
-                <b>Create: </b> {blog.attributes.createdAt}
+                <b>Created: </b>{" "}
+                {new Date(blog.attributes.createdAt).toLocaleDateString()}
               </h4>
               <h4>
-                <b>Publish: </b>
-                {blog.attributes.publishedAt}
+                <b>Published: </b>{" "}
+                {new Date(blog.attributes.publishedAt).toLocaleDateString()}
               </h4>
-              <h3 className="mt-0.5 text-lg text-gray-900 hover:underline ">
+              <h3 className="mt-0.5 text-lg text-gray-900 hover:underline">
                 <b>Substance:</b> {blog.attributes.Excerpt}
               </h3>
             </div>
@@ -63,7 +66,7 @@ export default function SingleBlog() {
             <div className="py-2 w-full flex flex-wrap gap-3">
               {blog.attributes.Tags?.map((tag) => (
                 <div key={tag.id} className="">
-                  <Tags key={tag.id} tag={tag} />
+                  <Tags tag={tag} />
                 </div>
               ))}
             </div>
