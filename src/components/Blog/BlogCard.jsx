@@ -5,11 +5,9 @@ export default function BlogCard({ blog }) {
   return (
     <>
       <article className="h-full overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-        <a href="#" className="inline-block">
-          <h3 className="mt-0.5 text-lg text-gray-900 hover:underline ">
-            {blog.attributes.Title}
-          </h3>
-        </a>
+        <h3 className="px-4 sm:p-6 text-lg text-gray-900 hover:underline ">
+          {blog.attributes.Title}
+        </h3>
         <div>
           <img
             src={blog.attributes.image.data.attributes.url}
