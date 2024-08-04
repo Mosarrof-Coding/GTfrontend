@@ -24,11 +24,6 @@ export default function SingleBlog() {
       </div>
     );
 
-  // Construct the Cloudinary image URL
-  const imageUrl = `${import.meta.env.VITE_CLOUDINARY_URL}/${
-    blog.attributes.image.data.attributes.url
-  }`;
-
   return (
     <section className="section prose-sm">
       <div className="container">
@@ -43,8 +38,8 @@ export default function SingleBlog() {
             <div className="bg-purple-200">
               <img
                 className="w-full h-auto"
-                src={imageUrl} // Use constructed Cloudinary image URL here
-                alt={blog.attributes.Title || "Blog Image"} // Use blog title for alt text
+                src={blog.attributes.image.data.attributes.url}
+                alt="singleBlog"
               />
             </div>
             <div className="blogEtc">

@@ -5,21 +5,19 @@ export default function BlogCard({ blog }) {
   return (
     <>
       <article className="h-full overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+        <a href="#" className="inline-block">
+          <h3 className="mt-0.5 text-lg text-gray-900 hover:underline ">
+            {blog.attributes.Title}
+          </h3>
+        </a>
         <div>
           <img
-            src={`https://res.cloudinary.com/dokkpior6/image/upload/${blog.attributes.image.data.attributes.url}`}
+            src={blog.attributes.image.data.attributes.url}
             alt="blog"
             className="my-0 max-h-[305px]"
           />
         </div>
-
         <div className="bg-white px-4 sm:p-6">
-          <a href="#" className="inline-block">
-            <h3 className="mt-0.5 text-lg text-gray-900 hover:underline ">
-              {blog.attributes.Title}
-            </h3>
-          </a>
-
           <h4 className="text-lg font-semibold text-purple-600">
             {blog.attributes.Category}
           </h4>
