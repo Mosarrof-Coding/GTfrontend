@@ -57,7 +57,7 @@ export default function Header() {
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+              className={`absolute left-0 top-0 z-[-1] w-full justify-center overscroll-contain bg-white/90 px-8 py-16 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
                 isToggleOpen
                   ? "visible opacity-100 backdrop-blur-sm"
                   : "invisible opacity-0"
@@ -68,7 +68,7 @@ export default function Header() {
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/"
                 >
                   <span> Home</span>
@@ -78,7 +78,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/about"
                 >
                   <span>About</span>
@@ -88,7 +88,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/service"
                 >
                   <span>Service</span>
@@ -98,7 +98,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/blog"
                 >
                   <span>Blog</span>
@@ -108,7 +108,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/testimonials"
                 >
                   <span>Testimonial</span>
@@ -118,7 +118,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/contact"
                 >
                   <span>Contact</span>
@@ -127,7 +127,7 @@ export default function Header() {
               <li role="none" className="flex items-stretch">
                 <Link
                   onClick={accHndle}
-                  className="flex items-center py-4 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer relative group"
+                  className="flex items-center py-1 lg:py-4 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer relative group"
                 >
                   Account
                   <GoChevronDown size={20} />
@@ -156,7 +156,7 @@ export default function Header() {
                 <li>
                   <Link
                     to={"/checkout"}
-                    className="relative inline-flex h-8 w-8 items-center justify-center rounded text-xl"
+                    className="relative inline-flex h-8 w-8 items-center justify-center rounded text-base lg:text-xl"
                   >
                     🛒
                     <span className="absolute -top-2 -right-2 inline-flex items-center justify-center gap-1 rounded-full border-2 border-purple-600 bg-pink-500 px-1 text-xs text-white">

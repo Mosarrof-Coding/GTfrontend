@@ -22,7 +22,7 @@ export default function BlogPage() {
     );
 
   return (
-    <section className="section py-8 md:py-12 lg:py-16">
+    <section className="section py-6 md:py-12 lg:py-16">
       <div className="container">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">

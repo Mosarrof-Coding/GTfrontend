@@ -54,7 +54,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="section bg-gray-100 py-8 md:py-12 lg:py-16">
+    <section className="section bg-gray-100 py-6 md:py-12 lg:py-16">
       <Toaster
         position="top-center"
         reverseOrder={false}
