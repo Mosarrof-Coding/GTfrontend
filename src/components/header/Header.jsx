@@ -12,15 +12,19 @@ export default function Header() {
     setActive(!active);
   };
 
+  const mobMenu = () => {
+    setIsToggleOpen(!isToggleOpen);
+  };
+
   return (
-    <header className="">
+    <header className="flex items-center">
       <div className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
         <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav className="flex py-0 md:py-1 lg:py-2 items-stretch justify-between font-medium text-slate-700">
             {/* <!-- Brand logo --> */}
             <div>
               <Link
-                className="flex items-center gap-1 whitespace-nowrap py-3 text-xl md:text-2xl lg:text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
+                className="flex items-center gap-1 whitespace-nowrap py-1 md:py-2 lg:py-3 text-xl md:text-2xl lg:text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
                 to="/"
               >
                 <span className="">G🏐LF</span>
@@ -34,7 +38,7 @@ export default function Header() {
                     : ""
                 }
               `}
-              onClick={() => setIsToggleOpen(!isToggleOpen)}
+              onClick={mobMenu}
               aria-expanded={isToggleOpen ? "true" : "false"}
               aria-label="Toggle navigation"
             >
@@ -70,8 +74,9 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/"
+                  onClick={mobMenu}
                 >
-                  <span> Home</span>
+                  <span>Home</span>
                 </Link>
               </li>
               <li role="none" className="flex items-stretch">
@@ -80,6 +85,7 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/about"
+                  onClick={mobMenu}
                 >
                   <span>About</span>
                 </Link>
@@ -90,6 +96,7 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/service"
+                  onClick={mobMenu}
                 >
                   <span>Service</span>
                 </Link>
@@ -100,6 +107,7 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/blog"
+                  onClick={mobMenu}
                 >
                   <span>Blog</span>
                 </Link>
@@ -110,6 +118,7 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/testimonials"
+                  onClick={mobMenu}
                 >
                   <span>Testimonial</span>
                 </Link>
@@ -120,6 +129,7 @@ export default function Header() {
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/contact"
+                  onClick={mobMenu}
                 >
                   <span>Contact</span>
                 </Link>
@@ -137,14 +147,16 @@ export default function Header() {
                     } cursor-default z-30`}
                   >
                     <Link
-                      to={"/signup"}
+                      to="/signup"
                       className="text-sm text-gray-600 hover:text-blue-500 hover:bg-slate-200 transition-all duration-300 py-1.5 px-2 lg:px-4"
+                      onClick={mobMenu}
                     >
                       Sign Up
                     </Link>
                     <Link
-                      to={"/login"}
+                      to="/login"
                       className="text-sm text-gray-600 hover:text-blue-500 hover:bg-slate-200 transition-all duration-300 py-1.5 px-2 lg:px-4"
+                      onClick={mobMenu}
                     >
                       Login
                     </Link>
@@ -155,13 +167,13 @@ export default function Header() {
               <div className="flex items-center lg:ml-4">
                 <li>
                   <Link
-                    to={"/checkout"}
+                    to="/checkout"
                     className="relative inline-flex h-8 w-8 items-center justify-center rounded text-base lg:text-xl"
+                    onClick={mobMenu}
                   >
                     🛒
-                    <span className="absolute -top-2 -right-2 inline-flex items-center justify-center gap-1 rounded-full border-2 border-purple-600 bg-pink-500 px-1 text-xs text-white">
+                    <span className="absolute -top-2 -right-2 inline-flex items-center justify-center gap-1 rounded-full border-2 border-purple-600 bg-pink-500 px-1 text-xs font-semibold text-white">
                       {cart.length}
-                      <span className="sr-only"> new emails </span>
                     </span>
                   </Link>
                 </li>

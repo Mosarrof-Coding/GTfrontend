@@ -54,7 +54,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="section bg-gray-100 py-6 md:py-12 lg:py-16">
+    <section className="section bg-gray-100">
       <Toaster
         position="top-center"
         reverseOrder={false}
@@ -77,25 +77,24 @@ export default function ContactPage() {
           },
         }}
       />
-
       <div className="container">
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-8">
               Contact Us
             </h2>
             <p className="max-w-xl text-base sm:text-lg">
               Have Questions About Your Golf Game? We're Here to Help. Reach Out
               to Our Golf Experts for Assistance and Support.
             </p>
-            <div className="mt-8">
+            <div className="mt-4 md:mt-8">
               <a
                 href="#"
-                className="text-xl sm:text-2xl font-bold text-pink-600"
+                className="text-lg sm:text-xl lg:2xl font-bold text-pink-600"
               >
                 0151 475 4450
               </a>
-              <address className="block mt-2 text-base sm:text-lg not-italic">
+              <address className="block lg:mt-2 text-base sm:text-lg not-italic">
                 282 Kevin Brook, Imogeneborough, CA 58517
               </address>
             </div>
@@ -114,7 +113,7 @@ export default function ContactPage() {
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                  className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                   required
                 />
               </div>
@@ -131,7 +130,7 @@ export default function ContactPage() {
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                     required
                   />
                 </div>
@@ -147,7 +146,7 @@ export default function ContactPage() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                     required
                   />
                 </div>
@@ -160,18 +159,18 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   name="message"
-                  rows="8"
+                  rows="7"
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                  className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                 ></textarea>
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="w-full py-2 md:py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
+                  className="w-full py-1 md:py-2 lg:py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
                 >
                   Send Enquiry
                 </button>

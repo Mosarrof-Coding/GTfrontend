@@ -143,7 +143,7 @@ export default function Login() {
               </p>
               <button
                 type="submit"
-                className="inline-block w-full py-3 px-4 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                className="inline-block w-full py-1 md:py-2 lg:py-3 px-4 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
               >
                 Login
               </button>

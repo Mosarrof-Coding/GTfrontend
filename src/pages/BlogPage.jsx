@@ -10,22 +10,22 @@ export default function BlogPage() {
 
   if (loading)
     return (
-      <div className="container section text-2xl text-yellow-400 pt-14">
+      <div className="container section text-2xl text-yellow-400">
         Loading...
       </div>
     );
   if (error)
     return (
-      <div className="container section text-2xl text-red-600 pt-14">
+      <div className="container section text-2xl text-red-600">
         Something went wrong!
       </div>
     );
 
   return (
-    <section className="section py-6 md:py-12 lg:py-16">
+    <section className="section">
       <div className="container">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
             Our Blogs
           </h2>
           <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600">

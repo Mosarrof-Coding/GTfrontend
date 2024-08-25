@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
-import "./App.css";
 import Context from "./context/Context";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -20,27 +18,29 @@ import SignPage from "./pages/SignPage";
 
 function App() {
   return (
-    <>
-      <Context>
+    <Context>
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/service" element={<ServicePage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog_details/:id" element={<SingleBlog />} />
-          <Route path="/testimonials" element={<TestimonialPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/accounts" element={<AccountPage />} />
-          <Route path="/signup" element={<SignPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/thankU" element={<ThankU />} />
-          <Route path="/*" element={<Notfound />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/service" element={<ServicePage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog_details/:id" element={<SingleBlog />} />
+            <Route path="/testimonials" element={<TestimonialPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/accounts" element={<AccountPage />} />
+            <Route path="/signup" element={<SignPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/thankU" element={<ThankU />} />
+            <Route path="/*" element={<Notfound />} />
+          </Routes>
+        </div>
         <Footer />
-      </Context>
-    </>
+      </div>
+    </Context>
   );
 }
 

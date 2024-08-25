@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <>
       <footer className="w-full text-slate-500">
-        <div className="border-t border-slate-200 bg-slate-100 py-12 text-base">
+        <div className="border-t border-slate-200 bg-slate-100 py-4 sm:py-8 lg:py-12 text-base">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <div
@@ -22,7 +22,9 @@ export default function Footer() {
                   className="mb-6 whitespace-nowrap text-lg md:text-xl lg:text-2xl leading-6 text-[#DC2626] font-black"
                   to="/"
                 >
-                  <span className="pb-6 inline-block">G🏐LF</span>
+                  <span className="pb-2 sm:pb-4 lg:pb-6 inline-block">
+                    G🏐LF
+                  </span>
                 </Link>
                 <p className="hidden md:block text-sm lg:text-base">
                   Discover premium golf experiences and connect with fellow golf
@@ -82,17 +84,17 @@ export default function Footer() {
               </nav>
 
               <nav
-                className="col-span-1 md:col-span-4 lg:col-span-2 hidden md:block"
+                className="col-span-1 md:col-span-4 lg:col-span-2"
                 aria-labelledby="footer-services"
               >
                 <h3
-                  className="mb-6 text-base font-medium text-slate-700"
+                  className="mb-2 sm:mb-4 lg:mb-6 text-base font-medium text-slate-700"
                   id="footer-services"
                 >
                   Services
                 </h3>
-                <ul>
-                  <li className="mb-2 leading-6">
+                <ul className="text-sm md:text-base">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/service"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -100,7 +102,7 @@ export default function Footer() {
                       Online Reservation
                     </Link>
                   </li>
-                  <li className="mb-2 leading-6">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/testimonials"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -108,7 +110,7 @@ export default function Footer() {
                       Testimonial
                     </Link>
                   </li>
-                  <li className="mb-2 leading-6">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/contact"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -162,7 +164,7 @@ export default function Footer() {
                 aria-labelledby="footer-social"
               >
                 <h3
-                  className="mb-6 text-base font-medium text-slate-700"
+                  className="pb-2 sm:pb-4 lg:pb-6 text-base font-medium text-slate-700"
                   id="footer-social"
                 >
                   Follow Us

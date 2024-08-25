@@ -10,14 +10,14 @@ export default function TestimonialPage() {
 
   if (loading)
     return (
-      <div className="container section text-2xl text-yellow-400 pt-14">
+      <div className="container section text-2xl text-yellow-400">
         Loading...
       </div>
     );
 
   if (error)
     return (
-      <div className="container section text-2xl text-red-600 pt-14">
+      <div className="container section text-2xl text-red-600">
         Something went wrong!
       </div>
     );
@@ -55,10 +55,10 @@ export default function TestimonialPage() {
   };
 
   return (
-    <section className="section py-6 md:py-12 lg:py-16 overflow-x-hidden">
+    <section className="section">
       <div className="container">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold my-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
             Testimonials
           </h2>
           <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-600">
@@ -71,7 +71,7 @@ export default function TestimonialPage() {
           <Slider {...sliderSettings}>
             {data.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-slide">
-                <div className="mx-auto px-4">
+                <div className="mx-auto md:px-2 lg:px-4">
                   <div className="max-w-14 mx-auto mb-1 rounded-md overflow-hidden">
                     <img
                       src={testimonial.attributes.medel.data?.attributes.url}
@@ -86,7 +86,7 @@ export default function TestimonialPage() {
                   <p className="text-center font-light text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl">
                     {testimonial.attributes.Description}
                   </p>
-                  <div className="flex items-center gap-4 max-w-fit mx-auto my-6">
+                  <div className="flex items-center gap-4 max-w-fit mx-auto mt-2 md:mt-4 lg:mt-6">
                     <div className="max-w-16 rounded-md overflow-hidden">
                       <img
                         src={testimonial.attributes.image.data?.attributes.url}

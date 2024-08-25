@@ -13,13 +13,13 @@ export default function SingleBlog() {
 
   if (loading)
     return (
-      <div className="container section pt-14 text-xl lg:text-2xl text-yellow-400">
+      <div className="container section text-xl lg:text-2xl text-yellow-400">
         Loading...
       </div>
     );
   if (error)
     return (
-      <div className="container section pt-14 text-xl lg:text-2xl text-red-400">
+      <div className="container section text-xl lg:text-2xl text-red-400">
         Something went wrong!
       </div>
     );
@@ -58,7 +58,7 @@ export default function SingleBlog() {
             <h4>
               <b>Tags:</b>
             </h4>
-            <div className="py-2 w-full flex flex-wrap gap-3">
+            <div className="w-full flex flex-wrap gap-3">
               {blog.attributes.Tags?.map((tag) => (
                 <div key={tag.id} className="">
                   <Tags tag={tag} />
@@ -66,7 +66,7 @@ export default function SingleBlog() {
               ))}
             </div>
           </div>
-          <article className="description prose lg:prose-lg">
+          <article className="description prose border-t-4 border-blue-800">
             <BlocksRenderer content={blog.attributes.Description} />
           </article>
         </div>
