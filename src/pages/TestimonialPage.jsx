@@ -67,12 +67,15 @@ export default function TestimonialPage() {
           </h3>
         </div>
 
-        <div className="max-w-[1120px] mx-auto">
+        <div className="max-w-[1120px] mx-auto overflow-hidden">
           <Slider {...sliderSettings}>
             {data.map((testimonial) => (
-              <div key={testimonial.id} className="testimonial-slide">
+              <div
+                key={testimonial.id}
+                className="testimonial-slide overflow-x-hidden"
+              >
                 <div className="mx-auto md:px-2 lg:px-4">
-                  <div className="max-w-14 mx-auto mb-1 rounded-md overflow-hidden">
+                  <div className="max-w-14 mx-auto mb-1 rounded-md">
                     <img
                       src={testimonial.attributes.medel.data?.attributes.url}
                       alt="medel"
