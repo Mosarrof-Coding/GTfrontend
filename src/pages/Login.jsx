@@ -85,7 +85,7 @@ export default function Login() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Login
             </h1>
-            <form className="mt-8 flex flex-col gap-4" onSubmit={handleLogin}>
+            <form className="mt-4 flex flex-col gap-4" onSubmit={handleLogin}>
               <div>
                 <label
                   htmlFor="identifier"
@@ -156,7 +156,7 @@ export default function Login() {
                 </strong>{" "}
                 for registration.
               </p>
-              <div className="w-full flex flex-col gap-4 mt-6">
+              <div className="w-full flex flex-col gap-4 mt-4">
                 <p className="text-sm">Or login using</p>
                 <div className="flex gap-2">
                   <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-red-500 to-purple-500 text-white">

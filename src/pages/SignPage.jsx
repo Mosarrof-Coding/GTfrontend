@@ -75,7 +75,7 @@ export default function SignPage() {
               Create an account
             </h1>
             <form
-              className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-6"
+              className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-6"
               onSubmit={handleSignUp}
             >
               <div className="col-span-6 sm:col-span-4">
