@@ -51,7 +51,7 @@ export default function SingleBlog() {
                 <b>Published: </b>{" "}
                 {new Date(blog.attributes.publishedAt).toLocaleDateString()}
               </h4>
-              <h3 className="mt-0.5 text-lg text-gray-900 hover:underline">
+              <h3 className="mt-0.5 text-lg text-gray-900">
                 <b>Substance:</b> {blog.attributes.Excerpt}
               </h3>
             </div>
