@@ -68,7 +68,7 @@ export default function SignPage() {
           },
         }}
       />
-      <div className="container">
+      <div className="contizer">
         <div className="flex items-center justify-center">
           <div className="max-w-xl lg:max-w-3xl">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">

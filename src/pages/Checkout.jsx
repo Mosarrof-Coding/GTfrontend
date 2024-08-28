@@ -84,7 +84,7 @@ export default function Checkout() {
             },
           }}
         />
-        <div className="container">
+        <div className="contizer">
           <div className="max-w-[800px] mx-auto">
             <header className="text-center">
               <h1 className="text-xl font-bold text-green-500 sm:text-3xl">

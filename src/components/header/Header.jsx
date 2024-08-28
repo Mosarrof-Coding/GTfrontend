@@ -19,17 +19,15 @@ export default function Header() {
   return (
     <header className="flex items-center">
       <div className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
-        <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
-          <nav className="flex py-0 md:py-1 lg:py-2 items-stretch justify-between font-medium text-slate-700">
+        <div className="contizer relative">
+          <nav className="flex md:py-1 items-center justify-between font-medium text-slate-700">
             {/* <!-- Brand logo --> */}
-            <div>
-              <Link
-                className="flex items-center gap-1 whitespace-nowrap py-1 md:py-2 lg:py-3 text-xl md:text-2xl lg:text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
-                to="/"
-              >
-                <span className="">G🏐LF</span>
-              </Link>
-            </div>
+            <Link
+              className="flex items-center gap-1 py-1 lg:py-2 text-xl md:text-2xl lg:text-3xl text-[#DC2626] font-black focus:outline-none lg:flex-1"
+              to="/"
+            >
+              <span className="inline-block">G🏐LF</span>
+            </Link>
             <button
               className={`relative order-10 block h-10 w-10 self-center lg:hidden
                 ${
@@ -72,7 +70,7 @@ export default function Header() {
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-1 lg:py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-400 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/"
                   onClick={mobMenu}
                 >

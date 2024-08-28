@@ -10,9 +10,9 @@ import {
 export default function Footer() {
   return (
     <>
-      <footer className="w-full text-slate-500">
-        <div className="border-t border-slate-200 bg-slate-100 py-4 sm:py-8 lg:py-12 text-base">
-          <div className="container mx-auto px-6">
+      <footer className="w-full text-slate-500 bg-slate-100">
+        <div className="contizer">
+          <div className="border-t border-slate-200 py-4 sm:py-8 lg:py-12 text-base">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <div
                 className="col-span-2 md:col-span-8 lg:col-span-4"

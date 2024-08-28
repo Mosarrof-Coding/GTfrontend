@@ -54,7 +54,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="section bg-gray-100">
+    <section className="section">
       <Toaster
         position="top-center"
         reverseOrder={false}
@@ -77,7 +77,7 @@ export default function ContactPage() {
           },
         }}
       />
-      <div className="container">
+      <div className="contizer">
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
             <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-8">
@@ -172,7 +172,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full py-1 md:py-2 lg:py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
                 >
-                  Send Enquiry
+                  Submit
                 </button>
               </div>
             </form>

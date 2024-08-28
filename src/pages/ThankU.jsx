@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function ThankU() {
   return (
     <section className="section">
-      <div className="container">
+      <div className="contizer">
         <div className="heading text-center max-w-[760px] mx-auto pb-8">
           <h2 className="text-2xl font-semibold my-2">Thank You</h2>
           <h3 className="text-5xl font-medium mb-5">💗</h3>

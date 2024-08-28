@@ -2,7 +2,7 @@
 export default function AccountPage() {
   return (
     <section className="section">
-      <div className="container">
+      <div className="contizer">
         <div className="heading text-center max-w-[560px] mx-auto pb-8">
           <h2 className="text-2xl font-semibold my-2">Our Services</h2>
           <h3 className="text-xl font-medium text-gray-600">

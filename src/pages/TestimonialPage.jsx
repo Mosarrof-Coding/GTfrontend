@@ -10,14 +10,14 @@ export default function TestimonialPage() {
 
   if (loading)
     return (
-      <div className="container section text-2xl text-yellow-400">
+      <div className="contizer section text-2xl text-yellow-400">
         Loading...
       </div>
     );
 
   if (error)
     return (
-      <div className="container section text-2xl text-red-600">
+      <div className="contizer section text-2xl text-red-600">
         Something went wrong!
       </div>
     );
@@ -56,9 +56,9 @@ export default function TestimonialPage() {
 
   return (
     <section className="section">
-      <div className="container">
-        <div className="heading text-center max-w-[560px] mx-auto pb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
+      <div className="contizer">
+        <div className="heading text-center max-w-[560px] mx-auto pb-2 sm:pb-2 md:pb-4 lg:pb-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold sm:mb-1 lg:mb-2">
             Testimonials
           </h2>
           <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-600">
@@ -82,7 +82,7 @@ export default function TestimonialPage() {
                       className="w-full h-auto"
                     />
                   </div>
-                  <h6 className="font-bold text-indigo-600 mb-4 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+                  <h6 className="font-bold text-indigo-600 sm:mb-2 lg:mb-4 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
                     <span className="text-sm text-black">Award:</span>{" "}
                     {testimonial.attributes.win}
                   </h6>
@@ -90,7 +90,7 @@ export default function TestimonialPage() {
                     {testimonial.attributes.Description}
                   </p>
                   <div className="flex items-center gap-4 max-w-fit mx-auto mt-2 md:mt-4 lg:mt-6">
-                    <div className="max-w-16 rounded-md overflow-hidden">
+                    <div className="w-12 lg:w-16 rounded-md overflow-hidden">
                       <img
                         src={testimonial.attributes.image.data?.attributes.url}
                         alt={testimonial.attributes.AvName}
