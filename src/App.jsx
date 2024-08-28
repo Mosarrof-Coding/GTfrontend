@@ -19,7 +19,7 @@ import SignPage from "./pages/SignPage";
 function App() {
   return (
     <Context>
-      <div className="flex flex-col min-h-screen">
+      <main className="flex flex-col min-h-screen">
         <Header />
         <div className="flex-grow">
           <Routes>
@@ -39,7 +39,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-      </div>
+      </main>
     </Context>
   );
 }

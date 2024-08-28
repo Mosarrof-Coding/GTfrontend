@@ -96,7 +96,7 @@ export default function Header() {
                   to="/service"
                   onClick={mobMenu}
                 >
-                  <span>Service</span>
+                  <span>Member Ship</span>
                 </Link>
               </li>
               <li role="none" className="flex items-stretch">
