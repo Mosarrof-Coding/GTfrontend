@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="bg-black/10 relative">
       <img src={banner} alt="" />
-      <div className="section absolute left-0 top-0 right-0 bottom-0 grid place-items-center px-[15px]">
+      <div className="absolute left-0 top-0 right-0 bottom-0 grid place-items-center px-[15px]">
         <div className="mx-auto max-w-[800px] text-center flex flex-col justify-between gap-2 md:flex-none py-4">
           <div>
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold  text-white">
