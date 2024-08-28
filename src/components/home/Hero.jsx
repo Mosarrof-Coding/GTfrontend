@@ -11,7 +11,7 @@ export default function Hero() {
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold text-white">
               Welcome to GalfTimes
             </h2>
-            <h1 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-blue-300 sm:py-1 md:py-2">
+            <h1 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-blue-300 sm:py-1 md:pb-2">
               Elevate Your Game with Premium
             </h1>
             <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[1] sm:leading-normal tracking-tight sm:tracking-normal">
