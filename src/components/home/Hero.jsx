@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
           <Link
             to=""
-            className="w-fit mx-auto mt-2 sm:mt-8 md:mt-16 rounded bg-red-600 px-4 md:px-6 lg:px-8 py-1 md:py-2 lg:py-3 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 leading-none"
+            className="w-fit mx-auto mt-2 sm:mt-8 md:mt-16 rounded bg-red-600 px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-2.5 lg:py-3 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 leading-none"
           >
             SHOPE NOW
           </Link>

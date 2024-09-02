@@ -15,6 +15,7 @@ import TestimonialPage from "./pages/TestimonialPage";
 import AccountPage from "./pages/AccountPage";
 import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
+import MessageTransport from "./components/Message/MessageTransport";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/accounts" element={<AccountPage />} />
             <Route path="/signup" element={<SignPage />} />
+            <Route path="/helpdesk" element={<MessageTransport />} />
             <Route path="/login" element={<Login />} />
             <Route path="/thankU" element={<ThankU />} />
             <Route path="/*" element={<Notfound />} />

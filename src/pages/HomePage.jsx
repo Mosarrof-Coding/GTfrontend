@@ -1,4 +1,5 @@
 import Hero from "../components/home/Hero";
+import MessageTransport from "../components/Message/MessageTransport";
 import AboutPage from "./AboutPage";
 import BlogPage from "./BlogPage";
 import ContactPage from "./ContactPage";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <BlogPage />
       <TestimonialPage />
       <ContactPage />
+      <MessageTransport />
     </>
   );
 }
