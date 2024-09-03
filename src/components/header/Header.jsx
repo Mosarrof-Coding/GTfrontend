@@ -82,17 +82,6 @@ export default function Header() {
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                  to="/about"
-                  onClick={mobMenu}
-                >
-                  <span>About</span>
-                </Link>
-              </li>
-              <li role="none" className="flex items-stretch">
-                <Link
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
                   to="/service"
                   onClick={mobMenu}
                 >
@@ -119,17 +108,6 @@ export default function Header() {
                   onClick={mobMenu}
                 >
                   <span>Testimonial</span>
-                </Link>
-              </li>
-              <li role="none" className="flex items-stretch">
-                <Link
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-1 lg:py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                  to="/contact"
-                  onClick={mobMenu}
-                >
-                  <span>Contact</span>
                 </Link>
               </li>
               <li role="none" className="flex items-stretch">
@@ -161,7 +139,6 @@ export default function Header() {
                   </ul>
                 </Link>
               </li>
-
               <div className="flex items-center lg:ml-4">
                 <li>
                   <Link

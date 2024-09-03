@@ -2,6 +2,8 @@
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import artImg from "../assets/page-banner.png";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -78,11 +80,28 @@ export default function ContactPage() {
         }}
       />
       <div className="contizer">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
-          <div className="lg:col-span-2 lg:py-12">
-            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-8">
+        <div className="artPortion grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-4 lg:mb-12">
+          <div className="w-full">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
               Contact Us
             </h2>
+            <ul className="flex gap-4 items-center sm:py-2">
+              <Link
+                to="/"
+                className="text-sm font-medium text-[#000] hover:text-[#868c19]"
+              >
+                Home
+              </Link>
+              <li className="text-[6px] text-[#868c19]">⚫</li>
+              <li className="text-sm font-medium text-[#868c19]">About Us</li>
+            </ul>
+          </div>
+          <div className="w-full">
+            <img src={artImg} alt="" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
+          <div className="lg:col-span-2 lg:py-12">
             <p className="max-w-xl text-base sm:text-lg">
               Have Questions About Your Golf Game? We're Here to Help. Reach Out
               to Our Golf Experts for Assistance and Support.

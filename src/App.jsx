@@ -15,7 +15,7 @@ import TestimonialPage from "./pages/TestimonialPage";
 import AccountPage from "./pages/AccountPage";
 import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
-import MessageTransport from "./components/Message/MessageTransport";
+import Shope from "./components/gallery/Shope";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<Shope />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/service" element={<ServicePage />} />
             <Route path="/blog" element={<BlogPage />} />
@@ -34,7 +35,6 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/accounts" element={<AccountPage />} />
             <Route path="/signup" element={<SignPage />} />
-            <Route path="/helpdesk" element={<MessageTransport />} />
             <Route path="/login" element={<Login />} />
             <Route path="/thankU" element={<ThankU />} />
             <Route path="/*" element={<Notfound />} />

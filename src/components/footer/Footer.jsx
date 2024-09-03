@@ -13,7 +13,7 @@ export default function Footer() {
       <footer className="w-full text-slate-500 bg-slate-100">
         <div className="contizer">
           <div className="border-t border-slate-200 py-4 sm:py-8 lg:py-12 text-base">
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-8 lg:grid-cols-12">
+            <div className="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-6">
               <div
                 className="col-span-2 md:col-span-8 lg:col-span-4"
                 aria-labelledby="footer-header"
@@ -38,17 +38,17 @@ export default function Footer() {
               </div>
 
               <nav
-                className="col-span-1 md:col-span-4 lg:col-span-2 hidden md:block"
+                className="col-span-1 md:col-span-4 lg:col-span-2"
                 aria-labelledby="footer-about"
               >
                 <h3
-                  className="mb-6 text-base font-medium text-slate-700"
+                  className="mb-2 sm:mb-4 lg:mb-6 text-base font-medium text-slate-700"
                   id="footer-about"
                 >
                   About
                 </h3>
-                <ul>
-                  <li className="mb-2 leading-6">
+                <ul className="text-sm md:text-base">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/about"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -56,7 +56,7 @@ export default function Footer() {
                       About Us
                     </Link>
                   </li>
-                  <li className="mb-2 leading-6">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/our-team"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -64,7 +64,7 @@ export default function Footer() {
                       Our Team
                     </Link>
                   </li>
-                  <li className="mb-2 leading-6">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/training-schedule"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -72,7 +72,7 @@ export default function Footer() {
                       Training Schedule
                     </Link>
                   </li>
-                  <li className="mb-2 leading-6">
+                  <li className="md:mb-2 leading-6">
                     <Link
                       to="/events"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -126,12 +126,12 @@ export default function Footer() {
                 aria-labelledby="footer-resources"
               >
                 <h3
-                  className="mb-6 text-base font-medium text-slate-700"
+                  className="mb-2 sm:mb-4 lg:mb-6 text-base font-medium text-slate-700"
                   id="footer-resources"
                 >
                   Resources
                 </h3>
-                <ul>
+                <ul className="text-sm md:text-base">
                   <li className="mb-2 leading-6">
                     <Link
                       to="/blog"
