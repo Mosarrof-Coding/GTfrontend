@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("https://your-backend-url.onrender.com"); // Replace with your backend URL
+const socket = io("https://your-backend-url.onrender.com");
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -9,19 +9,14 @@ const Chat = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    // Load chat history when the component mounts
     socket.on("chatHistory", (history) => {
       setMessages(history);
       scrollToBottom();
     });
-
-    // Listen for new incoming chat messages
     socket.on("chatMessage", (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);
       scrollToBottom();
     });
-
-    // Cleanup when the component unmounts
     return () => {
       socket.off("chatMessage");
       socket.off("chatHistory");
