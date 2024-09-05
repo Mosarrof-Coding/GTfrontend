@@ -20,9 +20,9 @@ import Shope from "./components/gallery/Shope";
 function App() {
   return (
     <Context>
-      <main className="flex flex-col min-h-screen">
+      <main className="flex flex-col min-h-screen ">
         <Header />
-        <div className="flex-grow">
+        <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/shop" element={<Shope />} />

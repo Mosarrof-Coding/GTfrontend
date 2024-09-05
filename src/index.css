@@ -22,6 +22,18 @@
   .prose {
     min-width: 100% !important;
   }
+  @keyframes bounce2 {
+    0% {
+      top: -120px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  .mybounce {
+    animation: bounce2 0.5s;
+  }
 }
 @layer components {
   .section {
