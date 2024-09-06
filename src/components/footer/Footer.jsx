@@ -150,7 +150,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <Link
-                      to="/gallery"
+                      to="/shop"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
                     >
                       Our Gallery

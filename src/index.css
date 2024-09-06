@@ -30,13 +30,50 @@
       top: 0;
     }
   }
-
   .mybounce {
     animation: bounce2 0.5s;
   }
+  /* ======== Ranger dslider ========== */
+  .input_left input {
+    padding: 10px;
+    max-width: 120px;
+    font-size: 20px;
+    -moz-appearance: textfield;
+  }
+  .input_left input[type="number"]::-webkit-inner-spin-button,
+  .input_left input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  .input_left span {
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  .inputContiser input {
+    width: 100%;
+    height: 5px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    background: none;
+    position: absolute;
+  }
+  .inputContiser input::-webkit-slider-thumb {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: #3d26bd;
+    -webkit-appearance: none;
+    pointer-events: auto;
+  }
+  .inputContiser input.red::-webkit-slider-thumb {
+    background-color: red;
+  }
 }
+/* components */
 @layer components {
   .section {
     @apply py-6 md:py-12 lg:py-16;
+  }
+  .sectionart {
+    @apply py-6 md:py-12;
   }
 }

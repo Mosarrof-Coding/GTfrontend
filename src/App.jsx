@@ -16,6 +16,8 @@ import AccountPage from "./pages/AccountPage";
 import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
 import Shope from "./components/gallery/Shope";
+import Product_details from "./components/gallery/Product_details";
+import Livechate from "./components/Message/Livechate";
 
 function App() {
   return (
@@ -25,14 +27,19 @@ function App() {
         <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/shop" element={<Shope />} />
             <Route path="/about" element={<AboutPage />} />
+
             <Route path="/service" element={<ServicePage />} />
+            <Route path="/checkout" element={<Checkout />} />
+
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog_details/:id" element={<SingleBlog />} />
+
+            <Route path="/shop" element={<Shope />} />
+            <Route path="/shop/products/:id" element={<Product_details />} />
+
             <Route path="/testimonials" element={<TestimonialPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/checkout" element={<Checkout />} />
             <Route path="/accounts" element={<AccountPage />} />
             <Route path="/signup" element={<SignPage />} />
             <Route path="/login" element={<Login />} />
@@ -40,6 +47,7 @@ function App() {
             <Route path="/*" element={<Notfound />} />
           </Routes>
         </div>
+        <Livechate />
         <Footer />
       </main>
     </Context>
