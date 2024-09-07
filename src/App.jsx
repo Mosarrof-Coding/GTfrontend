@@ -17,6 +17,7 @@ import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
 import Shope from "./components/gallery/Shope";
 import Product_details from "./components/gallery/Product_details";
+import Newes_later from "./components/Newes_letter/Newes_letter";
 // import Livechate from "./components/Message/Livechate";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           </Routes>
         </div>
         {/* <Livechate /> */}
+        <Newes_later />
         <Footer />
       </main>
     </Context>
