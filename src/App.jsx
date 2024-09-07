@@ -17,7 +17,7 @@ import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
 import Shope from "./components/gallery/Shope";
 import Product_details from "./components/gallery/Product_details";
-import Livechate from "./components/Message/Livechate";
+// import Livechate from "./components/Message/Livechate";
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
             <Route path="/*" element={<Notfound />} />
           </Routes>
         </div>
-        <Livechate />
+        {/* <Livechate /> */}
         <Footer />
       </main>
     </Context>

@@ -141,7 +141,7 @@ export default function Header() {
                   onClick={accHndle}
                   className="flex items-center py-1 lg:py-4 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer relative group"
                 >
-                  Account
+                  Profile
                   <GoChevronDown size={20} />
                   <ul
                     className={`absolute top-full bg-white shadow-lg w-32 py-3 rounded-md flex flex-col border-t-4 border-red-600 group-hover:opacity-100 ${

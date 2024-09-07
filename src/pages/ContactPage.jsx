@@ -79,9 +79,9 @@ export default function ContactPage() {
           },
         }}
       />
-      <div className="contizer">
-        <div className="artPortion grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-4 lg:mb-12">
-          <div className="w-full">
+      <div className="contizer flex flex-col gap-6 lg:gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
+          <div className="col-span-5 lg:col-span-2">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
               Contact Us
             </h2>
@@ -93,15 +93,15 @@ export default function ContactPage() {
                 Home
               </Link>
               <li className="text-[6px] text-[#868c19]">⚫</li>
-              <li className="text-sm font-medium text-[#868c19]">About Us</li>
+              <li className="text-sm font-medium text-[#868c19]">Contact Us</li>
             </ul>
           </div>
-          <div className="w-full">
+          <div className="col-span-5 lg:col-span-3">
             <img src={artImg} alt="" />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-5">
-          <div className="lg:col-span-2 lg:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+          <div className="col-span-5 lg:col-span-2">
             <p className="max-w-xl text-base sm:text-lg">
               Have Questions About Your Golf Game? We're Here to Help. Reach Out
               to Our Golf Experts for Assistance and Support.
@@ -119,8 +119,11 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-lg md:bg-white md:p-8 md:shadow-lg lg:col-span-3 lg:p-12">
-            <form className="space-y-4" onSubmit={postContactData}>
+          <div className=" col-span-5 lg:col-span-3">
+            <form
+              className="space-y-4 rounded-lg md:bg-white  md:shadow-lg md:p-4 lg:p-6"
+              onSubmit={postContactData}
+            >
               <div>
                 <label className="sr-only" htmlFor="name">
                   Name
@@ -149,7 +152,7 @@ export default function ContactPage() {
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 outline-none focus:border-green-200"
                     required
                   />
                 </div>

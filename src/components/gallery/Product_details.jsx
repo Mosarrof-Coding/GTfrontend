@@ -20,9 +20,7 @@ export default function Product_details() {
   };
 
   // reviews
-  // State to track which content is currently visible
   const [activeTab, setActiveTab] = useState("description");
-
   // Function to handle tab clicks
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -42,11 +40,12 @@ export default function Product_details() {
       </div>
     );
 
-  const datam = data?.attributes; // Accessing the product data directly
+  const datam = data?.attributes;
   const price = datam?.Price;
   const isOnSale = price > 90;
   const imageUrl = datam?.image?.data?.attributes?.url || "placeholder.png";
-  const categoryCounts = datam?.Category ? { [datam.Category]: 1 } : {}; // Handling category count
+  // Handling category count
+  const categoryCounts = datam?.Category ? { [datam.Category]: 1 } : {};
   const calculateSalePrice = (price) => (price + price * 0.14).toFixed(0);
 
   const getRating = (price) => {
@@ -128,17 +127,7 @@ export default function Product_details() {
                   </ul>
                 </h3>
                 <p className="text-sm md:text-base text-gray-600">
-                  Looking to elevate your game? Our premium golf balls are
-                  engineered for maximum performance, offering unbeatable
-                  distance, precision, and control. Designed with advanced
-                  dimple technology, these balls reduce drag and increase lift,
-                  ensuring longer, straighter shots. Crafted with a multi-layer
-                  construction, they provide exceptional feel and spin around
-                  the greens, giving you the edge in every round. Whether you're
-                  a beginner or a seasoned pro, our golf balls deliver
-                  consistent quality, durability, and performance, making them
-                  the perfect choice for golfers who demand the best. Unlock
-                  your full potential with every swing!
+                  {datam?.Description}
                 </p>
                 <h3 className="text-sm md:text-base lg:text-lg font-medium">
                   Availability: N/A

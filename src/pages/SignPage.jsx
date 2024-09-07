@@ -181,7 +181,7 @@ export default function SignPage() {
               <div className="col-span-6 sm:flex sm:items-center sm:justify-between">
                 <button
                   type="submit"
-                  className="inline-block w-full sm:w-auto py-1 md:py-2 lg:py-3 px-4 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                  className="inline-block w-full sm:w-auto py-1 md:py-2 lg:py-3 px-4 text-sm font-medium text-white bg-rose-600 border border-rose-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-400 focus:outline-none focus:ring active:text-blue-600"
                 >
                   Create an account
                 </button>
