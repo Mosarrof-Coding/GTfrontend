@@ -62,8 +62,6 @@ export default function Shope() {
     return acc;
   }, {});
 
-  // slider
-
   return (
     <section className="pt-2 sm:pt-4 md:pt-8 lg:pt-12 xl:pt-16 bg-[#fff]">
       {/* art */}
@@ -149,9 +147,7 @@ export default function Shope() {
                       <h3 className="name">
                         <small>Price:</small> {datam.attributes.Price}$
                       </h3>
-                      <button className="w-fit mx-auto mt-1 sm:mt-3 md:mt-4 rounded bg-red-600 px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-2.5 lg:py-3 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 leading-none">
-                        Add to Cart
-                      </button>
+                      <button className="cmnBtn mt-2">Add to Cart</button>
                     </div>
                   </div>
                 );

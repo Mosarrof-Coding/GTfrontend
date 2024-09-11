@@ -17,13 +17,14 @@ import Login from "./pages/Login";
 import SignPage from "./pages/SignPage";
 import Shope from "./components/gallery/Shope";
 import Product_details from "./components/gallery/Product_details";
-import Newes_later from "./components/Newes_letter/Newes_letter";
+import Teams from "./components/Teams/Teams";
+import Training from "./components/trainongs/Training";
 // import Livechate from "./components/Message/Livechate";
 
 function App() {
   return (
     <Context>
-      <main className="flex flex-col min-h-screen ">
+      <main className="flex flex-col min-h-screen">
         <Header />
         <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px]">
           <Routes>
@@ -40,6 +41,10 @@ function App() {
             <Route path="/shop/products/:id" element={<Product_details />} />
 
             <Route path="/testimonials" element={<TestimonialPage />} />
+
+            <Route path="/golf_teams" element={<Teams />} />
+            <Route path="/training-schedule" element={<Training />} />
+
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/accounts" element={<AccountPage />} />
             <Route path="/signup" element={<SignPage />} />
@@ -49,7 +54,6 @@ function App() {
           </Routes>
         </div>
         {/* <Livechate /> */}
-        <Newes_later />
         <Footer />
       </main>
     </Context>

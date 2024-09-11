@@ -1,30 +1,32 @@
 import { Link } from "react-router-dom";
 import banner from "../../../public/gbanner.jpg";
 /* eslint-disable react/no-unescaped-entities */
+
 export default function Hero() {
   return (
-    <section className="bg-black/10 relative">
-      <img src={banner} alt="" />
-      <div className="absolute left-0 top-0 right-0 bottom-0 grid place-items-center px-[15px]">
-        <div className="mx-auto max-w-[800px] text-center flex flex-col justify-between gap-2 md:flex-none">
-          <div className="w-full">
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold text-white leading-[.6] sm:leading-normal">
-              Welcome to GalfTimes
-            </h2>
-            <h1 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-blue-300 py-1 lg:py-2 xl:py-4">
-              Elevate Your Game with Premium
+    <section className="hero-section">
+      <img src={banner} alt="Golf Banner" className="hero-banner" />
+      <div className="hero-content">
+        <div className="hero-inner">
+          <div className="hero-text">
+            <div className="hero-tagline">
+              <h2 className="tagline-text">Welcome to The Golf Club ~</h2>
+            </div>
+            <h1 className="hero-title">
+              Elevate your Game{" "}
+              <span className="hero-subtitle">with Premium</span>
             </h1>
-            <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[1] sm:leading-normal">
+            <p className="hero-description">
               Discover top-quality clubs, apparel, and accessories designed to
-              enhance every swing. Join the community of golfers who trust us
-              for their journey from tee to green.
+              enhance every swing.
+              <span className="hero-additional-text">
+                Join the community of golfers who trust us for their journey
+                from tee to green.
+              </span>
             </p>
           </div>
-          <Link
-            to="/shop"
-            className="w-fit mx-auto mt-2 sm:mt-8 md:mt-16 rounded bg-red-600 px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-2.5 lg:py-3 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 leading-none"
-          >
-            SHOPE NOW
+          <Link to="/shop" className="cmnBtn">
+            SHOP NOW
           </Link>
         </div>
       </div>

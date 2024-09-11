@@ -180,7 +180,7 @@ export default function Checkout() {
                                 value={customerDetails.name}
                                 onChange={handleInputChange}
                                 required
-                                className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 capitalize shadow-sm"
+                                className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border border-gray-200 bg-white text-gray-700 capitalize shadow-sm"
                               />
                             </div>
                             <div className="col-span-6 sm:col-span-3">
@@ -198,7 +198,7 @@ export default function Checkout() {
                                 value={customerDetails.phone}
                                 onChange={handleInputChange}
                                 required
-                                className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
+                                className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
                               />
                             </div>
 
@@ -217,7 +217,7 @@ export default function Checkout() {
                                 value={customerDetails.email}
                                 onChange={handleInputChange}
                                 required
-                                className="mt-1 px-4 py-2 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
+                                className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border border-gray-200 bg-white text-gray-700 shadow-sm"
                               />
                             </div>
                           </div>
@@ -336,7 +336,7 @@ export default function Checkout() {
                           <button
                             type="submit"
                             disabled={isLoading}
-                            className="group w-full flex justify-center py-2 md:py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="cmnBtn w-full"
                           >
                             {isLoading ? "Placing Order..." : "Place Order"}
                           </button>

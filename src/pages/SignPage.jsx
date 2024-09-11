@@ -75,7 +75,7 @@ export default function SignPage() {
               Create an account
             </h1>
             <form
-              className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-6"
+              className="mt-4 grid grid-cols-1 gap-4 lg:gap-6 sm:grid-cols-6"
               onSubmit={handleSignUp}
             >
               <div className="col-span-6 sm:col-span-4">
@@ -89,7 +89,7 @@ export default function SignPage() {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                   value={user.name}
                   onChange={handleUser}
                   placeholder="Your Name"
@@ -108,7 +108,7 @@ export default function SignPage() {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                  className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                   value={user.email}
                   onChange={handleUser}
                   placeholder="Your Email"
@@ -129,7 +129,7 @@ export default function SignPage() {
                     id="password"
                     name="password"
                     placeholder="Type your password"
-                    className="py-2 px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
+                    className="mt-1 py-1 md:py-1.5 lg:py-2 px-2 md:px-3 xl:px-4 w-full rounded-md border focus:outline-blue-200 bg-white text-gray-700 shadow-sm"
                     value={user.password}
                     onChange={handleUser}
                     required
@@ -171,7 +171,7 @@ export default function SignPage() {
                     {" "}
                     terms and conditions{" "}
                   </Link>
-                  and
+                  and{" "}
                   <Link to="#" className="text-blue-600 underline">
                     privacy policy
                   </Link>
@@ -179,10 +179,7 @@ export default function SignPage() {
               </div>
 
               <div className="col-span-6 sm:flex sm:items-center sm:justify-between">
-                <button
-                  type="submit"
-                  className="inline-block w-full sm:w-auto py-1 md:py-2 lg:py-3 px-4 text-sm font-medium text-white bg-rose-600 border border-rose-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-400 focus:outline-none focus:ring active:text-blue-600"
-                >
+                <button type="submit" className="cmnBtn1">
                   Create an account
                 </button>
 

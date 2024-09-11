@@ -37,7 +37,7 @@ export default function PriceCard() {
         <div className="contizer">
           <div className="heading max-w-[560px] mx-auto pb-8 text-center">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
-              Our Services
+              Membership Pricing
             </h2>
             <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600">
               Dive into our membership tiers designed to match your golfing
@@ -74,7 +74,7 @@ export default function PriceCard() {
 
                   <button
                     type="button"
-                    className="mt-2 lg:mt-4 w-full sm:w-auto rounded border border-red-600 bg-red-600 px-6 py-1 md:py-2 lg:py-3 text-center text-sm sm:text-base md:text-lg font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:mt-6 cursor-pointer"
+                    className="mt-2 sm:mt-4 lg:mt-6 w-full sm:w-auto rounded border border-rose-600 bg-rose-600 px-6 pt-0.5 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-center text-sm sm:text-base md:text-lg font-medium text-white hover:bg-transparent hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 cursor-pointer transition-all duration-500"
                     onClick={() => addToCart(datam)}
                   >
                     Join Now

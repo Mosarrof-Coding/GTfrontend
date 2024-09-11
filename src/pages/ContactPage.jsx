@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import artImg from "../assets/page-banner.png";
+import Newes_letter from "../components/Newes_letter/Newes_letter";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -56,151 +57,153 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="section">
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          className: "",
-          duration: 5000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-          },
-          success: {
-            duration: 3000,
-            theme: {
-              primary: "green",
-              secondary: "black",
+    <>
+      <section className="section">
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          containerClassName=""
+          containerStyle={{}}
+          toastOptions={{
+            className: "",
+            duration: 5000,
+            style: {
+              background: "#363636",
+              color: "#fff",
             },
-          },
-        }}
-      />
-      <div className="contizer flex flex-col gap-6 lg:gap-8 xl:gap-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
-          <div className="col-span-5 lg:col-span-2">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
-              Contact Us
-            </h2>
-            <ul className="flex gap-4 items-center sm:py-2">
-              <Link
-                to="/"
-                className="text-sm font-medium text-[#000] hover:text-[#868c19]"
-              >
-                Home
-              </Link>
-              <li className="text-[6px] text-[#868c19]">⚫</li>
-              <li className="text-sm font-medium text-[#868c19]">Contact Us</li>
-            </ul>
-          </div>
-          <div className="col-span-5 lg:col-span-3">
-            <img src={artImg} alt="" />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 xl:gap-12">
-          <div className="col-span-5 lg:col-span-2">
-            <p className="max-w-xl text-base sm:text-lg">
-              Have Questions About Your Golf Game? We're Here to Help. Reach Out
-              to Our Golf Experts for Assistance and Support.
-            </p>
-            <div className="mt-4 md:mt-8">
-              <a
-                href="#"
-                className="text-lg sm:text-xl lg:2xl font-bold text-pink-600"
-              >
-                0151 475 4450
-              </a>
-              <address className="block lg:mt-2 text-base sm:text-lg not-italic">
-                282 Kevin Brook, Imogeneborough, CA 58517
-              </address>
+            success: {
+              duration: 3000,
+              theme: {
+                primary: "green",
+                secondary: "black",
+              },
+            },
+          }}
+        />
+        <div className="contizer flex flex-col gap-6 lg:gap-8 xl:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
+            <div className="col-span-5 lg:col-span-2">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
+                Contact Us
+              </h2>
+              <ul className="flex gap-4 items-center sm:py-2">
+                <Link
+                  to="/"
+                  className="text-sm font-medium text-[#000] hover:text-[#868c19]"
+                >
+                  Home
+                </Link>
+                <li className="text-[6px] text-[#868c19]">⚫</li>
+                <li className="text-sm font-medium text-[#868c19]">
+                  Contact Us
+                </li>
+              </ul>
+            </div>
+            <div className="col-span-5 lg:col-span-3">
+              <img src={artImg} alt="" />
             </div>
           </div>
-
-          <div className=" col-span-5 lg:col-span-3">
-            <form
-              className="space-y-4 rounded-lg md:bg-white  md:shadow-lg md:p-4 lg:p-6"
-              onSubmit={postContactData}
-            >
-              <div>
-                <label className="sr-only" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
-                  required
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+            <div className="col-span-5 lg:col-span-2">
+              <p className="max-w-xl text-base sm:text-lg">
+                Have Questions About Your Golf Game? We're Here to Help. Reach
+                Out to Our Golf Experts for Assistance and Support.
+              </p>
+              <div className="mt-4 md:mt-8">
+                <a
+                  href="#"
+                  className="text-lg sm:text-xl lg:2xl font-bold text-pink-600"
+                >
+                  0151 475 4450
+                </a>
+                <address className="block lg:mt-2 text-base sm:text-lg not-italic">
+                  282 Kevin Brook, Imogeneborough, CA 58517
+                </address>
               </div>
+            </div>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className=" col-span-5 lg:col-span-3">
+              <form
+                className="space-y-4 rounded-lg md:bg-white  md:shadow-lg md:p-4 lg:p-6"
+                onSubmit={postContactData}
+              >
                 <div>
-                  <label className="sr-only" htmlFor="email">
-                    Email
+                  <label className="sr-only" htmlFor="name">
+                    Name
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 outline-none focus:border-green-200"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="phone">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={formData.phone}
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
                     onChange={handleChange}
                     className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
                     required
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="sr-only" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="7"
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
-                ></textarea>
-              </div>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="sr-only" htmlFor="email">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full p-2 lg:p-3 text-sm border border-gray-200 outline-none focus:border-green-200"
+                      required
+                    />
+                  </div>
 
-              <div>
-                <button
-                  type="submit"
-                  className="w-full py-1 md:py-2 lg:py-3 px-5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition duration-300 focus:outline-none"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+                  <div>
+                    <label className="sr-only" htmlFor="phone">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="sr-only" htmlFor="message">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    placeholder="Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button type="submit" className="cmnBtn1 w-full sm:w-fit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Newes_letter />
+    </>
   );
 }

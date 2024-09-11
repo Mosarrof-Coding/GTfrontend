@@ -9,31 +9,23 @@ export default function BlogPage() {
   );
 
   if (loading)
-    return (
-      <div className="contizer section text-2xl text-yellow-400">
-        Loading...
-      </div>
-    );
+    return <div className="blog-container loading-section">Loading...</div>;
   if (error)
     return (
-      <div className="contizer section text-2xl text-red-600">
-        Something went wrong!
-      </div>
+      <div className="blog-container error-section">Something went wrong!</div>
     );
 
   return (
-    <section className="section">
-      <div className="contizer">
-        <div className="heading text-center max-w-[560px] mx-auto pb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
-            Our Blogs
-          </h2>
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600">
+    <section className="blog-section">
+      <div className="blog-container">
+        <div className="blog-header">
+          <h2 className="blog-title">Our Blogs</h2>
+          <h3 className="blog-subtitle">
             Golf is a game of skill and strategy, enjoyed by millions worldwide.
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="blog-grid">
           {data?.map((blog) => (
             <div key={blog.id}>
               <BlogCard blog={blog} />

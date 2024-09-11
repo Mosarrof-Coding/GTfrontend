@@ -150,11 +150,7 @@ export default function UserComments({
             </label>
           </div>
 
-          <input
-            type="submit"
-            value={"Post Comment"}
-            className="inline-block w-full sm:w-auto py-1 md:py-2 lg:py-3 px-4 mt-4 md:mt-8 lg:mt-10 text-sm font-medium text-white bg-rose-600 border border-rose-600 rounded-md transition duration-300 hover:bg-transparent hover:text-blue-400 focus:outline-none focus:ring active:text-blue-600 cursor-pointer"
-          />
+          <input type="submit" value={"Post Comment"} className="cmnBtn1" />
         </form>
       </div>
     </>
