@@ -1,5 +1,4 @@
 import Hero from "../components/home/Hero";
-import TestimonialPage from "./TestimonialPage";
 import Newes_letter from "../components/Newes_letter/Newes_letter";
 import Our_story from "../components/home/Our_story";
 import ClubShop from "../components/Shop/ClubShop";
@@ -14,7 +13,6 @@ export default function HomePage() {
       <ClubShop />
       <Blog_home />
       <Member_Ship />
-      <TestimonialPage />
       <Newes_letter />
     </>
   );
