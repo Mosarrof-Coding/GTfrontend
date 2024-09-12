@@ -71,13 +71,13 @@
 /* components */
 @layer components {
   .cmnBtn {
-    @apply w-fit mx-auto mt-4 md:mt-8 lg:mt-12 rounded bg-rose-600  hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 pt-0.5 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
+    @apply w-fit mx-auto mt-4 md:mt-8 lg:mt-12 rounded bg-rose-600  hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
   }
   .cmnBtn1 {
-    @apply inline-block w-full sm:w-auto rounded bg-rose-600 hover:bg-rose-700  px-3 sm:px-4 md:px-5 lg:px-6 pt-0.5 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
+    @apply inline-block w-full sm:w-auto rounded bg-rose-600 hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
   }
   .section {
-    @apply py-6 md:py-12 lg:py-16;
+    @apply py-6 md:py-12 lg:py-16 border-b;
   }
   .sectionart {
     @apply py-6 md:py-12;
@@ -102,7 +102,7 @@
     @apply bg-rose-800/60 w-fit mx-auto px-4 rounded-full;
   }
   .tagline-text {
-    @apply text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white pt-0.5;
+    @apply text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white;
   }
   .hero-title {
     @apply font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-yellow-300;

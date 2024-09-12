@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="hero-inner">
           <div className="hero-text">
             <div className="hero-tagline">
-              <h2 className="tagline-text">Welcome to The Golf Club ~</h2>
+              <h2 className="tagline-text">Welcome to The Golf Club</h2>
             </div>
             <h1 className="hero-title">
               Elevate your Game{" "}
