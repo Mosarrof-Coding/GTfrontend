@@ -2,7 +2,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import useFetch from "../../hooks/useFetch";
 import { cartState } from "../../context/Context";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Newes_letter from "../Newes_letter/Newes_letter";
+import artImg from "../../assets/page-banner.png";
 
 export default function PriceCard() {
   const { setCart } = cartState();
@@ -34,6 +36,28 @@ export default function PriceCard() {
   return (
     <>
       <section className="section">
+        {/* art */}
+        <div className="contizer artPortion grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 pb-4 lg:pb-12">
+          <div className="w-full sm:ml-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
+              Membership
+            </h2>
+            <ul className="flex gap-4 items-center sm:py-2 text-sm lg:test-base">
+              <Link
+                to="/"
+                className="font-medium text-[#000] hover:text-[#868c19]"
+              >
+                Home
+              </Link>
+              <li className="text-[6px] text-[#868c19]">⚫</li>
+              <li className="font-medium text-[#868c19]">Membership</li>
+            </ul>
+          </div>
+          <div className="w-full">
+            <img src={artImg} alt="" className="" />
+          </div>
+        </div>
+
         <div className="contizer">
           <div className="heading max-w-[560px] mx-auto pb-8 text-center">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
@@ -113,6 +137,7 @@ export default function PriceCard() {
           </div>
         </div>
       </section>
+      <Newes_letter />
     </>
   );
 }

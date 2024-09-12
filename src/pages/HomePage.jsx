@@ -1,10 +1,10 @@
 import Hero from "../components/home/Hero";
-import ServicePage from "./ServicePage";
 import TestimonialPage from "./TestimonialPage";
 import Newes_letter from "../components/Newes_letter/Newes_letter";
 import Our_story from "../components/home/Our_story";
 import ClubShop from "../components/Shop/ClubShop";
 import Blog_home from "../components/Blog_club/Blog_home";
+import Member_Ship from "../components/memberShip/Member_Ship";
 
 export default function HomePage() {
   return (
@@ -13,7 +13,7 @@ export default function HomePage() {
       <Our_story />
       <ClubShop />
       <Blog_home />
-      <ServicePage />
+      <Member_Ship />
       <TestimonialPage />
       <Newes_letter />
     </>
