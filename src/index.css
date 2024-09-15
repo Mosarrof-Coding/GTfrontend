@@ -70,8 +70,16 @@
 }
 /* components */
 @layer components {
+  .testimonImg {
+    @apply w-full h-full aspect-[16/9] lg:aspect-auto;
+    background: url(./assets/testimonials.jpg) no-repeat center/cover;
+  }
+  .cntcImg {
+    @apply w-full h-full aspect-[16/9] lg:aspect-auto;
+    background: url(./assets/contact-bg.jpg) no-repeat center/cover;
+  }
   .cmnBtn {
-    @apply w-fit mx-auto mt-4 md:mt-8 lg:mt-12 rounded bg-rose-600  hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
+    @apply w-fit inline-block mx-auto mt-4 md:mt-8 lg:mt-12 rounded bg-rose-600  hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
   }
   .cmnBtn1 {
     @apply inline-block w-full sm:w-auto rounded bg-rose-600 hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
@@ -225,5 +233,13 @@
 
   .blog-grid {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6;
+  }
+
+  /* terms and condiytions */
+  .terms h4 {
+    @apply mt-6 text-blue-800 text-xl lg:text-2xl font-semibold;
+  }
+  .terms p {
+    @apply text-sm sm:text-base lg:text-lg my-3 text-blue-950;
   }
 }

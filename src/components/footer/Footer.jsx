@@ -10,9 +10,9 @@ import {
 export default function Footer() {
   return (
     <>
-      <footer className="w-full text-slate-500 bg-slate-100">
+      <footer className="w-full text-slate-500 bg-slate-50">
         <div className="contizer">
-          <div className="flex flex-wrap gap-4 md:gap-6 xl:gap-16 w-fit mx-auto py-4 sm:py-8 lg:py-12 text-base tracking-wide">
+          <div className="flex flex-wrap justify-between gap-4 md:gap-6 xl:gap-16 mx-auto py-4 sm:py-8 lg:py-12 text-base tracking-wide">
             <div
               className="max-w-full lg:max-w-[480px]"
               aria-labelledby="footer-header"

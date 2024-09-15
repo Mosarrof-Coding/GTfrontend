@@ -90,7 +90,7 @@ export default function Blog_home() {
           </div>
         </div>
         <div className="text-center">
-          <Link to="/shop" className="cmnBtn inline-block">
+          <Link to="/blog" className="cmnBtn inline-block">
             Read Our Blog
           </Link>
         </div>

@@ -160,9 +160,12 @@ export default function Product_details() {
                     </span>
                   </div>
 
-                  <button className="w-fit rounded bg-red-600 px-4 py-1 sm:py-2 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700">
+                  <Link
+                    to={`/shopingCart/${datam.id}`}
+                    className="w-fit rounded bg-red-600 px-4 py-1 sm:py-2 text-xs lg:text-sm font-medium text-white shadow hover:bg-red-700"
+                  >
                     Add to Cart
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

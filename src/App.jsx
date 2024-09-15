@@ -19,12 +19,15 @@ import Shope from "./components/gallery/Shope";
 import Product_details from "./components/gallery/Product_details";
 import Teams from "./components/Teams/Teams";
 import Training from "./components/trainongs/Training";
+import ShoppingCart from "./components/Cart/ShoppingCart";
+import Terms_Conditions from "./components/Terms&Conditions/Terms_Conditions";
+import Privachy from "./components/Terms&Conditions/Privachy";
 // import Livechate from "./components/Message/Livechate";
 
 function App() {
   return (
     <Context>
-      <main className="flex flex-col min-h-screen">
+      <main className="flex flex-col min-h-screen bg-white">
         <Header />
         <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px]">
           <Routes>
@@ -45,7 +48,13 @@ function App() {
             <Route path="/golf_teams" element={<Teams />} />
             <Route path="/training-schedule" element={<Training />} />
 
+            <Route path="/shopingCart/:id" element={<ShoppingCart />} />
+
             <Route path="/contact" element={<ContactPage />} />
+
+            <Route path="/Terms_conditions" element={<Terms_Conditions />} />
+            <Route path="/Privacy_Policy" element={<Privachy />} />
+
             <Route path="/accounts" element={<AccountPage />} />
             <Route path="/signup" element={<SignPage />} />
             <Route path="/login" element={<Login />} />

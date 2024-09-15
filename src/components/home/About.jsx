@@ -13,7 +13,6 @@ import prtnr2 from "../../assets/partnar/partner2.png";
 import prtnr3 from "../../assets/partnar/partner3.png";
 import prtnr4 from "../../assets/partnar/partner4.png";
 import prtnr5 from "../../assets/partnar/partner5.png";
-import TestimonialPage from "../../pages/TestimonialPage";
 
 export default function About() {
   return (
@@ -206,8 +205,7 @@ export default function About() {
             </div>
             <img alt="couple" src={couple} className="rounded-lg" />
           </div>
-          {/* testimonial */}
-          <TestimonialPage />
+
           {/* OUR TRUSTED PARTNER  */}
           <div className="about-description">
             <h5 className="text-sm lg:text-base font-medium text-rose-600 text-center">

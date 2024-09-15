@@ -1,7 +1,7 @@
 import subsImg from "../../assets/subscribe.png";
 export default function Newes_letter() {
   return (
-    <section className=" bg-slate-100 ">
+    <section className=" bg-slate-50 ">
       <div className="contizer section relative border-b border-slate-200">
         <form action="" className="max-w-[800px] mx-auto text-center">
           <h1 className="text-xl sm:text-2xl xl:text-4xl font-bold text-blue-950 mb-2 md:mb-3 lg:mb-4">

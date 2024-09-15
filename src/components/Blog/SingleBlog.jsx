@@ -32,9 +32,9 @@ export default function SingleBlog() {
       <div className="contizer">
         <div className="blogDetails grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 myGridBlogDetails">
           <div className="blogImg">
-            <h3 className="inline-block text-xs sm:text-base md:text-sm lg:text-lg font-bold pt-[1px] px-1 sm:px-2 md:px-3 lg:px-4 rounded lg:rounded-md bg-[#000000] text-white sm:mb-1 lg:mb-2">
+            <h4 className="inline-block text-xs sm:text-base md:text-sm lg:text-lg font-bold px-1 sm:px-2 md:px-3 lg:px-4 rounded lg:rounded-md bg-[#000000] text-white sm:mb-1 lg:mb-2">
               {blog.attributes.Category}
-            </h3>
+            </h4>
             <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold">
               {blog.attributes.Title}
             </h2>
