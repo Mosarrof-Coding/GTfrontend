@@ -2,15 +2,16 @@
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import artImg from "../assets/page-banner.png";
 import Newes_letter from "../components/Newes_letter/Newes_letter";
 import { TiLocationOutline } from "react-icons/ti";
 import { TbMessage2Check } from "react-icons/tb";
 import { LuPhoneCall } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
+import Art from "../components/ArtPage/Art";
 
 export default function ContactPage() {
+  const pgContact = "Contact Us";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -62,52 +63,31 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="section">
-        <Toaster
-          position="top-center"
-          reverseOrder={false}
-          gutter={8}
-          containerClassName=""
-          containerStyle={{}}
-          toastOptions={{
-            className: "",
-            duration: 5000,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-            success: {
-              duration: 3000,
-              theme: {
-                primary: "green",
-                secondary: "black",
+      <Art pgContact={pgContact} />{" "}
+      <section className="padd">
+        <div>
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+            gutter={8}
+            containerClassName=""
+            containerStyle={{}}
+            toastOptions={{
+              className: "",
+              duration: 5000,
+              style: {
+                background: "#363636",
+                color: "#fff",
               },
-            },
-          }}
-        />
-        <div className="flex flex-col gap-6 lg:gap-8 xl:gap-12">
-          <div className="contizer grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
-            <div className="col-span-5 lg:col-span-2">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
-                Contact Us
-              </h2>
-              <ul className="flex gap-4 items-center sm:py-2">
-                <Link
-                  to="/"
-                  className="text-sm font-medium text-[#000] hover:text-[#868c19]"
-                >
-                  Home
-                </Link>
-                <li className="text-[6px] text-[#868c19]">⚫</li>
-                <li className="text-sm font-medium text-[#868c19]">
-                  Contact Us
-                </li>
-              </ul>
-            </div>
-            <div className="col-span-5 lg:col-span-3">
-              <img src={artImg} alt="" />
-            </div>
-          </div>
+              success: {
+                duration: 3000,
+                theme: {
+                  primary: "green",
+                  secondary: "black",
+                },
+              },
+            }}
+          />
           <div className="cntcImg py-4 lg:py-12 flex flex-col gap-4 lg:gap-8 xl:gap-14">
             <div className="contizer location grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-2 xl:gap-6">
               <div className="locCard flex flex-col bg-gray-100 lg:gap-5 border rounded-lg text-center p-4 md:p-2 lg:p-8">

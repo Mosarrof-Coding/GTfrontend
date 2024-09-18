@@ -4,7 +4,7 @@ import shopImgab2 from "../../assets/experience-wrap2.jpg";
 import { Link } from "react-router-dom";
 export default function ClubShop() {
   return (
-    <section className="section">
+    <section className="padd">
       <div className="contizer">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-8 xl:gap-24">
           <div>
@@ -35,11 +35,11 @@ export default function ClubShop() {
               </Link>
             </div>
           </div>
-          <div className="storyImg relative mb-8 lg:mb-16">
+          <div className="storyImg relative">
             <div className="w-[80%] ms-auto">
               <img src={shopImgab} alt="shopImgab" className="rounded-lg" />
             </div>
-            <ul className="w-[320px] xl:w-[480px] bg-[#e6c772]/90 rounded-lg absolute -bottom-8 left-0 flex flex-col justify-center gap-4 text-center">
+            <ul className="w-[320px] xl:w-[480px] bg-[#e6c772]/90 rounded-lg absolute bottom-0 left-0 flex flex-col justify-center gap-4 text-center">
               <img src={shopImgab2} alt="" className="rounded-lg" />
             </ul>
           </div>

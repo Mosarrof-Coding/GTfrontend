@@ -61,7 +61,7 @@ export default function Checkout() {
 
   return (
     <>
-      <section className="section">
+      <section className="padd">
         <Toaster
           position="top-center"
           reverseOrder={false}

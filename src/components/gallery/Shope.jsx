@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import artImg from "../../assets/page-banner.png";
 import useFetch from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 import RangeSlider from "../Range_slider/RangeSlider";
+import Art from "../ArtPage/Art";
+import LoadingDots from "../LoadingDots";
 
 export default function Shope() {
+  const pgShop = "Shop";
   const { data, loading, error } = useFetch(
     `${import.meta.env.VITE_APP_URL}/api/shops?populate=*`
   );
@@ -55,13 +57,13 @@ export default function Shope() {
 
   if (loading)
     return (
-      <div className="contizer section text-2xl text-yellow-400">
-        Loading...
+      <div className="contizer mt-16">
+        <LoadingDots />
       </div>
     );
   if (error)
     return (
-      <div className="contizer section text-2xl text-red-600">
+      <div className="contizer mt-16 text-2xl text-red-600">
         Something went wrong!
       </div>
     );
@@ -77,30 +79,9 @@ export default function Shope() {
   }, {});
 
   return (
-    <section className="pt-2 sm:pt-4 md:pt-8 lg:pt-12 xl:pt-16 bg-[#fff]">
-      {/* art */}
-      <div className="contizer artPortion grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 pb-4 lg:pb-12">
-        <div className="w-full sm:ml-4">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
-            Shop
-          </h2>
-          <ul className="flex gap-4 items-center sm:py-2 text-sm lg:test-base">
-            <Link
-              to="/"
-              className="font-medium text-[#000] hover:text-[#868c19]"
-            >
-              Home
-            </Link>
-            <li className="text-[6px] text-[#868c19]">⚫</li>
-            <li className="font-medium text-[#868c19]">Shop</li>
-          </ul>
-        </div>
-        <div className="w-full">
-          <img src={artImg} alt="" className="" />
-        </div>
-      </div>
-      <div className="bg-rose-50 sectionart">
-        {/* contents */}
+    <>
+      <Art pgShop={pgShop} />
+      <section className="padd bg-yellow-200">
         <div className="contizer products grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-4 lg:gap-6 xl:gap-10">
           <div className="md:col-span-8">
             {/* sort */}
@@ -294,7 +275,7 @@ export default function Shope() {
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

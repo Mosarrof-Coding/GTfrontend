@@ -5,6 +5,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Tags from "./Tags";
 import UserComments from "./UserComments";
 import user from "../../assets/user.jpg";
+import LoadingDots from "../../components/LoadingDots";
 
 export default function SingleBlog() {
   const { id } = useParams();
@@ -16,19 +17,19 @@ export default function SingleBlog() {
 
   if (loading)
     return (
-      <div className="contizer section text-xl lg:text-2xl text-yellow-400">
-        Loading...
+      <div className="contizer mt-16">
+        <LoadingDots />
       </div>
     );
   if (error)
     return (
-      <div className="contizer section text-xl lg:text-2xl text-red-400">
+      <div className="contizer mt-16 text-2xl text-red-600">
         Something went wrong!
       </div>
     );
 
   return (
-    <section className="section">
+    <section className="padd">
       <div className="contizer">
         <div className="blogDetails grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 myGridBlogDetails">
           <div className="blogImg">

@@ -29,7 +29,7 @@ function App() {
     <Context>
       <main className="flex flex-col min-h-screen bg-white">
         <Header />
-        <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px]">
+        <div className="flex-grow pt-10 md:pt-12 lg:pt-[62px] gap-8 sm:gap-12 lg:gap-16 xl:gap-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

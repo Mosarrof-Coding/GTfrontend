@@ -1,52 +1,34 @@
-import { Link } from "react-router-dom";
-import artImg from "../../assets/page-banner.png";
 import useFetch from "../../hooks/useFetch";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { SiInsta360 } from "react-icons/si";
 import Newes_letter from "../Newes_letter/Newes_letter";
+import Art from "../ArtPage/Art";
+import LoadingDots from "../LoadingDots";
 
 export default function Teams() {
+  const teams = "Our Teams";
   const { data, loading, error } = useFetch(
     `${import.meta.env.VITE_APP_URL}/api/teams?populate=*`
   );
 
   if (loading)
-    return <div className="blog-container loading-section">Loading...</div>;
+    return (
+      <div className="contizer mt-16">
+        <LoadingDots />
+      </div>
+    );
   if (error)
     return (
-      <div className="blog-container error-section">Something went wrong!</div>
+      <div className="contizer mt-16 text-2xl text-red-600">
+        Something went wrong!
+      </div>
     );
 
   return (
     <>
-      <section className="sectionart">
-        <div className="bg-white">
-          <div className="contizer grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
-            <div className="">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
-                Our Teams
-              </h2>
-              <ul className="flex gap-4 items-center sm:py-2">
-                <Link
-                  to="/"
-                  className="text-sm font-medium text-[#000] hover:text-[#868c19]"
-                >
-                  Home
-                </Link>
-                <li className="text-[6px] text-[#868c19]">⚫</li>
-                <li className="text-sm font-medium text-[#868c19]">
-                  Our Teams
-                </li>
-              </ul>
-            </div>
-            <div className="">
-              <img src={artImg} alt="Contact Us Art" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section bg-indigo-50">
+      <Art pgTeams={teams} />
+      <section className="padd">
         <div className="contizer">
           <div className="w-fit mx-auto text-center pb-1 sm:pb-2 lg:pb-3 xl:pb-4">
             <h5 className="text-sm sm:text-base md:text-lg">

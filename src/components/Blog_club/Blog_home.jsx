@@ -12,7 +12,7 @@ export default function Blog_home() {
   });
 
   return (
-    <section className="section">
+    <section className="padd">
       <div className="contizer">
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-2 sm:gap-3 lg:gap-4 xl:gap-12">
           <div>
@@ -62,7 +62,7 @@ export default function Blog_home() {
               <div> 📆 {formattedDate}</div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-8 py-4 lg:py-8 xl:py-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-8 pt-4 lg:pt-8 xl:pt-14">
             <div className="overflow-hidden rounded-lg">
               <img
                 src={bghm2img}

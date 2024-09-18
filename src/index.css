@@ -84,11 +84,8 @@
   .cmnBtn1 {
     @apply inline-block w-full sm:w-auto rounded bg-rose-600 hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
   }
-  .section {
-    @apply py-6 md:py-12 lg:py-16;
-  }
-  .sectionart {
-    @apply py-6 md:py-12;
+  .padd {
+    @apply py-4 sm:py-8 lg:py-12 xl:py-16;
   }
   /* hero section */
   .hero-section {
@@ -126,12 +123,6 @@
   }
 
   /* about css */
-  .about-section {
-    @apply section;
-  }
-  .container {
-    @apply contizer flex flex-col gap-6 md:gap-12 lg:gap-16;
-  }
   .about-header {
     @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16;
   }
@@ -178,10 +169,6 @@
     @apply text-red-600 hover:underline;
   }
   /* account css */
-  .account-section {
-    @apply section;
-  }
-
   .account-container {
     @apply contizer;
   }
@@ -203,10 +190,6 @@
   }
 
   /* blog */
-  .blog-section {
-    @apply section;
-  }
-
   .blog-container {
     @apply contizer;
   }
@@ -236,10 +219,13 @@
   }
 
   /* terms and condiytions */
+  .terms ul {
+    @apply lg:pl-8;
+  }
   .terms h4 {
-    @apply mt-6 text-blue-800 text-xl lg:text-2xl font-semibold;
+    @apply text-blue-800 text-xl lg:text-2xl font-semibold mt-4;
   }
   .terms p {
-    @apply text-sm sm:text-base lg:text-lg my-3 text-blue-950;
+    @apply text-sm sm:text-base lg:text-lg text-blue-950 mb-1 lg:mb-1.5 xl:mb-2;
   }
 }

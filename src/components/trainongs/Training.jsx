@@ -1,49 +1,32 @@
 import { Link } from "react-router-dom";
-import artImg from "../../assets/page-banner.png";
 import useFetch from "../../hooks/useFetch";
 import Newes_letter from "../Newes_letter/Newes_letter";
+import Art from "../ArtPage/Art";
+import LoadingDots from "../LoadingDots";
 
 export default function Training() {
+  const Trainings = "Trainings";
   const { data, loading, error } = useFetch(
     `${import.meta.env.VITE_APP_URL}/api/trainings?populate=*`
   );
 
   if (loading)
-    return <div className="blog-container loading-section">Loading...</div>;
+    return (
+      <div className="contizer mt-16">
+        <LoadingDots />
+      </div>
+    );
   if (error)
     return (
-      <div className="blog-container error-section">Something went wrong!</div>
+      <div className="contizer mt-16 text-2xl text-red-600">
+        Something went wrong!
+      </div>
     );
 
   return (
     <>
-      <section className="sectionart">
-        <div className="bg-white">
-          <div className="contizer grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-14 xl:gap-16">
-            <div className="">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
-                Trainings
-              </h2>
-              <ul className="flex gap-4 items-center sm:py-2">
-                <Link
-                  to="/"
-                  className="text-sm font-medium text-[#000] hover:text-[#868c19]"
-                >
-                  Home
-                </Link>
-                <li className="text-[6px] text-[#868c19]">⚫</li>
-                <li className="text-sm font-medium text-[#868c19]">
-                  Trainings
-                </li>
-              </ul>
-            </div>
-            <div className="">
-              <img src={artImg} alt="Contact Us Art" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section bg-indigo-50">
+      <Art pgTrainings={Trainings} />{" "}
+      <section className="padd">
         <div className="contizer">
           <div className="w-fit mx-auto text-center pb-1 sm:pb-2 lg:pb-3 xl:pb-4">
             <h5 className="text-sm sm:text-base md:text-lg">GOLF LESSONS</h5>
@@ -106,7 +89,7 @@ export default function Training() {
               </div>
             ))}
           </div>
-        </div>
+        </div>{" "}
       </section>
       <Newes_letter />
     </>

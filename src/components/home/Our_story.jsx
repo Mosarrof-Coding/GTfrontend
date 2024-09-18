@@ -3,7 +3,7 @@ import storryImg from "../../assets/tradition-of-excellence.jpg";
 import { Link } from "react-router-dom";
 export default function Our_story() {
   return (
-    <section className="section">
+    <section className="padd">
       <div className="contizer">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-8 xl:gap-24">
           <div className="storyImg flex flex-col gap-4 order-2 sm:order-1 relative">

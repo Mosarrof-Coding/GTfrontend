@@ -56,7 +56,7 @@ export default function Login() {
   };
 
   return (
-    <section className="section">
+    <section className="padd">
       <Toaster
         position="top-center"
         reverseOrder={false}

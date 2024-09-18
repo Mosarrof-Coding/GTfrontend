@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FiDelete, FiMinus, FiPlus } from "react-icons/fi";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 const ShoppingCart = () => {
@@ -32,9 +32,9 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-6">
-      <div className="container">
-        <h1 className="text-xl font-bold mb-4">Shopping Cart</h1>
+    <section className="bg-gray-100 padd">
+      <div className="contizer">
+        <h1 className="text-xl lg:text-3xl font-bold mb-4">Shopping Cart</h1>
         <form action="">
           <div className="bg-white shadow-md rounded-lg p-6">
             <table className="min-w-full text-left border-y border-gray-300">
@@ -45,7 +45,7 @@ const ShoppingCart = () => {
                   <th className="py-2">Unit Price</th>
                   <th className="py-2">Quantity</th>
                   <th className="py-2">Subtotal</th>
-                  <td className="py-2">Delete</td>
+                  <td className="py-2 text-red-400">Delete</td>
                 </tr>
               </thead>
               <tbody>
@@ -92,7 +92,7 @@ const ShoppingCart = () => {
                 <input
                   type="text"
                   className="border rounded py-2 px-4 w-fit"
-                  placeholder="Enter coupon code"
+                  placeholder={`Enter coupon = ${"moss"}`}
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value)}
                 />
@@ -121,15 +121,16 @@ const ShoppingCart = () => {
               <li>Total</li>
               <li>${finalPrice.toFixed(2)}</li>{" "}
             </ul>
-            <input
-              type="button"
+            <Link
+              to={`/checkout`}
               className="text-white border rounded px-4 py-2 w-fit bg-blue-500 hover:bg-blue-600 ms-auto"
-              value="Proceed to Checkout"
-            />
+            >
+              Proceed to Checkout
+            </Link>
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
