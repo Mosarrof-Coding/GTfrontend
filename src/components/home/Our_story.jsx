@@ -1,7 +1,49 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect, useRef, useState } from "react";
 import storryImg from "../../assets/tradition-of-excellence.jpg";
 import { Link } from "react-router-dom";
 export default function Our_story() {
+  const [count, setCount] = useState(0);
+  const [isCounting, setIsCounting] = useState(false); // To track if counting has started
+  const counterRef = useRef(null); // Reference to the counter element
+
+  const startCounting = () => {
+    setCount(0); // Reset count to 0
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount < 37) {
+          return prevCount + 1;
+        } else {
+          clearInterval(interval); // Stop counting when it reaches 37
+          return prevCount;
+        }
+      });
+    }, 300); // Spread count evenly over 10 seconds
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isCounting) {
+          setIsCounting(true); // Start counting only once
+          startCounting();
+        }
+      },
+      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current); // Observe the counter element
+    }
+
+    // Cleanup the observer on component unmount
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, [isCounting]); // Re-run only if `isCounting` changes
+
   return (
     <section className="padd">
       <div className="contizer">
@@ -11,8 +53,11 @@ export default function Our_story() {
               <img src={storryImg} alt="Our Story" className="rounded-lg" />
             </div>
             <ul className="w-full sm:w-[220px] xl:w-[280px] py-8 bg-[#e6c772]/90 rounded-lg sm:absolute bottom-6 right-0 flex flex-col justify-center gap-4 text-center">
-              <li className="text-2xl lg:text-5xl font-semibold text-white">
-                97 +
+              <li
+                ref={counterRef}
+                className="text-2xl lg:text-5xl font-semibold text-white"
+              >
+                {count} +
               </li>
               <li className="text-lg xl:text-xl">Happy Users Around World</li>
             </ul>
