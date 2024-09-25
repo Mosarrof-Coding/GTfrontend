@@ -17,7 +17,7 @@ export default function Join_us() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2 lg:gap-3 xl:gap-6 pt-8">
-            <div className="cards bg-gray-100 py-8 px-2 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
+            <div className="cards bg-gray-100 p-2 sm:p-3 md:p-2 lg:p-3 xl:p-6 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
               <img
                 src={golf}
                 alt="golf"
@@ -29,7 +29,7 @@ export default function Join_us() {
               </h4>
               <p>Founded by a team of professional Golf players of USA club.</p>
             </div>
-            <div className="cards bg-gray-100 py-8 px-2 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
+            <div className="cards bg-gray-100 p-2 sm:p-3 md:p-2 lg:p-3 xl:p-6 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
               <img
                 src={birdie}
                 alt="birdie"
@@ -41,7 +41,7 @@ export default function Join_us() {
               </h4>
               <p>Founded by a team of professional Golf players of USA club.</p>
             </div>
-            <div className="cards bg-gray-100 py-8 px-2 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
+            <div className="cards bg-gray-100 p-2 sm:p-3 md:p-2 lg:p-3 xl:p-6 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
               <img
                 src={award}
                 alt="award"
@@ -53,7 +53,7 @@ export default function Join_us() {
               </h4>
               <p>Founded by a team of professional Golf players of USA club.</p>
             </div>
-            <div className="cards bg-gray-100 py-8 px-2 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
+            <div className="cards bg-gray-100 p-2 sm:p-3 md:p-2 lg:p-3 xl:p-6 rounded-lg flex flex-col gap-2 md:gap-3 lg:gap-4">
               <img
                 src={golf_cart}
                 alt="golf_cart"

@@ -6,8 +6,7 @@ export default function Tea() {
     <>
       {/* Tee off */}
       <section className="padd">
-        {" "}
-        <div className="about-content max-w-[1320px] mx-auto">
+        <div className="about-content max-w-[1320px] px-[15px] mx-auto">
           <div className="about-description">
             <h5 className="text-base lg:text-xl font-medium text-rose-600">
               COME TEE OFF TODAY
