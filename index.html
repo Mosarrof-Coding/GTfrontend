@@ -2,12 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GolfTimes</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="GolfTimes: Your go-to source for everything golf, including news, tips, and exclusive content for golf enthusiasts."
+    />
+    <meta
+      name="keywords"
+      content="Golf, Golf Club, Golf News, Golf Tips, Golf Enthusiast"
+    />
+    <meta name="author" content="GolfTimes" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GolfTimes - Everything Golf" />
+    <meta
+      property="og:description"
+      content="Stay updated with the latest news, tips, and exclusive golf content."
+    />
+    <meta property="og:image" content="/public/golftimes-preview.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Title and Favicon -->
+    <title>GolfTimes - Everything Golf</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+
+    <!-- Preload important assets (e.g., fonts or CSS) -->
+    <link rel="preload" href="/public/styles.css" as="style" />
+    <link rel="stylesheet" href="/public/styles.css" />
+
+    <!-- Defer or async the script to improve loading speed -->
+    <script defer type="module" src="/src/main.jsx"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
