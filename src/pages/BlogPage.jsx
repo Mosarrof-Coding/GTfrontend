@@ -12,21 +12,21 @@ export default function BlogPage() {
 
   if (loading)
     return (
-      <div className="contizer mt-16">
+      <div className="contizer mt-16 pt-10 md:pt-12 lg:pt-[62px]">
         <LoadingDots />
       </div>
     );
   if (error)
     return (
-      <div className="contizer mt-16 text-2xl text-red-600">
+      <div className="contizer mt-16 pt-10 md:pt-12 lg:pt-[62px] text-2xl text-red-600">
         Something went wrong!
       </div>
     );
 
   return (
-    <>
+    <div className="pt-10 md:pt-12 lg:pt-[62px]">
       <Art pgName={pgName} />
-      <section className="padd">
+      <div className="padd">
         <div className="">
           <div className="contizer">
             <div className="blog-header">
@@ -46,7 +46,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

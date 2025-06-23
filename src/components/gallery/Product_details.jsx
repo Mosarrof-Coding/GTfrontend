@@ -58,9 +58,9 @@ export default function Product_details() {
   };
 
   return (
-    <>
+    <section className="pt-10 md:pt-12 lg:pt-[62px]">
       <Art compName={compName} pgPrdct_name={p_name} />
-      <section className="padd bg-yellow-200">
+      <div className="padd bg-yellow-200">
         <div className="">
           <div className="contizer grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-4 lg:gap-6 xl:gap-10">
             <div className="col-span-6 md:col-span-8 order-2 md:order-1">
@@ -301,7 +301,7 @@ export default function Product_details() {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

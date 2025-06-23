@@ -7,11 +7,11 @@ export default function TestimonialPage() {
   const Testimonials = "Testimonials";
 
   return (
-    <>
+    <div className="pt-10 md:pt-12 lg:pt-[62px]">
       <Art pgTestimonial={Testimonials} />
       <Testimonial />
       <Trusted_partnar />
       <Newes_letter />
-    </>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function AccountPage() {
   return (
-    <section className="account-section">
+    <section className="account-section pt-10 md:pt-12 lg:pt-[62px]">
       <div className="account-container">
         <div className="account-header">
           <h2 className="account-title">Our Services</h2>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import memImg from "../../assets/membership.jpg";
 export default function Member_Ship() {
   return (
-    <section className="padd">
+    <section className="padd pt-10 md:pt-12 lg:pt-[62px]">
       <div className="max-w-[1230px] mx-auto px-[15px]">
         <div className=" bg-[#e8e498] px-2 sm:px-4 lg:px-8 xl:px-16 py-4 sm:py-8 md:py-12 lg:py-16 rounded-3xl">
           <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl font-semibold max-w-[300px] md:max-w-[460px] mx-auto text-center">

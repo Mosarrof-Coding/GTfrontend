@@ -57,13 +57,13 @@ export default function Shope() {
 
   if (loading)
     return (
-      <div className="contizer mt-16">
+      <div className="contizer mt-16 pt-10 md:pt-12 lg:pt-[62px]">
         <LoadingDots />
       </div>
     );
   if (error)
     return (
-      <div className="contizer mt-16 text-2xl text-red-600">
+      <div className="contizer mt-16 pt-10 md:pt-12 lg:pt-[62px] text-2xl text-red-600">
         Something went wrong!
       </div>
     );
@@ -79,9 +79,9 @@ export default function Shope() {
   }, {});
 
   return (
-    <>
+    <div className="pt-10 md:pt-12 lg:pt-[62px]">
       <Art pgShop={pgShop} />
-      <section className="padd bg-yellow-200">
+      <div className="padd bg-yellow-200">
         <div className="contizer products grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-4 lg:gap-6 xl:gap-10">
           <div className="md:col-span-8">
             {/* sort */}
@@ -275,7 +275,7 @@ export default function Shope() {
             </ul>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

@@ -32,7 +32,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <section className="bg-gray-100 padd">
+    <section className="bg-gray-100 padd pt-10 md:pt-12 lg:pt-[62px]">
       <div className="contizer">
         <h1 className="text-xl lg:text-3xl font-bold mb-4">Shopping Cart</h1>
         <form action="">

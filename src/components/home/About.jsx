@@ -9,7 +9,7 @@ import Tea from "./Tea";
 export default function About() {
   const pgAbout = "About";
   return (
-    <>
+    <div className="pt-10 md:pt-12 lg:pt-[62px]">
       <Art pgAbout={pgAbout} />
       <AboutContent />
       <Join_us />
@@ -17,6 +17,6 @@ export default function About() {
       <Testimonial />
       <Trusted_partnar />
       <Newes_letter />
-    </>
+    </div>
   );
 }

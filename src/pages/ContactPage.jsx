@@ -62,9 +62,9 @@ export default function ContactPage() {
   };
 
   return (
-    <>
-      <Art pgContact={pgContact} />{" "}
-      <section className="padd">
+    <section className="pt-10 md:pt-12 lg:pt-[62px]">
+      <Art pgContact={pgContact} />
+      <div className="padd">
         <div>
           <Toaster
             position="top-center"
@@ -88,31 +88,31 @@ export default function ContactPage() {
               },
             }}
           />
-          <div className="cntcImg py-4 lg:py-12 flex flex-col gap-4 lg:gap-8 xl:gap-14">
-            <div className="contizer location grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-2 xl:gap-6">
-              <div className="locCard flex flex-col bg-gray-100 lg:gap-5 border rounded-lg text-center p-4 md:p-2 lg:p-8">
-                <span className="bg-blue-950 p-2 w-fit rounded-full mx-auto">
+          <div className="flex flex-col gap-4 lg:gap-8 xl:gap-14 py-4 lg:py-12 cntcImg">
+            <div className="gap-4 md:gap-2 xl:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 contizer location">
+              <div className="flex flex-col lg:gap-5 bg-gray-100 p-4 md:p-2 lg:p-8 border rounded-lg text-center locCard">
+                <span className="bg-blue-950 mx-auto p-2 rounded-full w-fit">
                   <TiLocationOutline size={28} color="white" />
                 </span>
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-medium">
+                <h3 className="font-medium text-xl lg:text-2xl xl:text-3xl">
                   Our Location
                 </h3>
                 <address>45/15 New alsala Avenew Booston town, Austria</address>
               </div>
-              <div className="locCard flex flex-col bg-gray-100 lg:gap-5 border rounded-lg text-center p-4 md:p-2 lg:p-8">
-                <span className="bg-blue-950 p-2 w-fit rounded-full mx-auto">
+              <div className="flex flex-col lg:gap-5 bg-gray-100 p-4 md:p-2 lg:p-8 border rounded-lg text-center locCard">
+                <span className="bg-blue-950 mx-auto p-2 rounded-full w-fit">
                   <TbMessage2Check size={28} color="white" />
                 </span>
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-medium">
+                <h3 className="font-medium text-xl lg:text-2xl xl:text-3xl">
                   Our Location
                 </h3>
                 <address>supportinfo@vesper.com contact@info.com</address>
               </div>
-              <div className="locCard flex flex-col bg-gray-100 lg:gap-5 border rounded-lg text-center p-4 md:p-2 lg:p-8">
-                <span className="bg-blue-950 p-2 w-fit rounded-full mx-auto">
+              <div className="flex flex-col lg:gap-5 bg-gray-100 p-4 md:p-2 lg:p-8 border rounded-lg text-center locCard">
+                <span className="bg-blue-950 mx-auto p-2 rounded-full w-fit">
                   <LuPhoneCall size={28} color="white" />
                 </span>
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-medium">
+                <h3 className="font-medium text-xl lg:text-2xl xl:text-3xl">
                   Our Location
                 </h3>
                 <address>
@@ -120,11 +120,11 @@ export default function ContactPage() {
                   <span className="block">+(002) 0106-8710-584</span>
                 </address>
               </div>
-              <div className="locCard flex flex-col bg-gray-100 lg:gap-5 border rounded-lg text-center p-4 md:p-2 lg:p-8">
-                <span className="bg-blue-950 p-2 w-fit rounded-full mx-auto">
+              <div className="flex flex-col lg:gap-5 bg-gray-100 p-4 md:p-2 lg:p-8 border rounded-lg text-center locCard">
+                <span className="bg-blue-950 mx-auto p-2 rounded-full w-fit">
                   <FaWhatsapp size={28} color="white" />
                 </span>
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-medium">
+                <h3 className="font-medium text-xl lg:text-2xl xl:text-3xl">
                   Our Location
                 </h3>
                 <address>
@@ -133,9 +133,9 @@ export default function ContactPage() {
                 </address>
               </div>
             </div>
-            <div className="contizer grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+            <div className="gap-4 md:gap-6 lg:gap-8 xl:gap-12 grid grid-cols-1 lg:grid-cols-5 contizer">
               <div className="col-span-5 lg:col-span-2">
-                <div className="rounded-lg bg-white/90 p-2 lg:p-4">
+                <div className="bg-white/90 p-2 lg:p-4 rounded-lg">
                   <p className="max-w-xl text-base sm:text-lg">
                     Have Questions About Your Golf Game? We're Here to Help.
                     Reach Out to Our Golf Experts for Assistance and Support.
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   <div className="mt-4 md:mt-8">
                     <a
                       href="#"
-                      className="text-lg sm:text-xl lg:2xl font-bold text-pink-600"
+                      className="font-bold text-pink-600 text-lg sm:text-xl lg:2xl"
                     >
                       0151 475 4450
                     </a>
@@ -154,9 +154,9 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className=" col-span-5 lg:col-span-3">
+              <div className="col-span-5 lg:col-span-3">
                 <form
-                  className="space-y-4 rounded-lg md:bg-white/90  md:shadow-lg md:p-4 lg:p-6"
+                  className="space-y-4 md:bg-white/90 md:shadow-lg md:p-4 lg:p-6 rounded-lg"
                   onSubmit={postContactData}
                 >
                   <div>
@@ -170,12 +170,12 @@ export default function ContactPage() {
                       placeholder="Name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                      className="p-2 lg:p-3 border border-gray-200 focus:border-green-200 rounded-lg outline-none w-full text-sm"
                       required
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
                     <div>
                       <label className="sr-only" htmlFor="email">
                         Email
@@ -187,7 +187,7 @@ export default function ContactPage() {
                         placeholder="Email Address"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full p-2 lg:p-3 text-sm border border-gray-200 outline-none focus:border-green-200"
+                        className="p-2 lg:p-3 border border-gray-200 focus:border-green-200 outline-none w-full text-sm"
                         required
                       />
                     </div>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                         placeholder="Phone Number"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                        className="p-2 lg:p-3 border border-gray-200 focus:border-green-200 rounded-lg outline-none w-full text-sm"
                         required
                       />
                     </div>
@@ -220,12 +220,12 @@ export default function ContactPage() {
                       placeholder="Message"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full p-2 lg:p-3 text-sm border border-gray-200 rounded-lg outline-none focus:border-green-200"
+                      className="p-2 lg:p-3 border border-gray-200 focus:border-green-200 rounded-lg outline-none w-full text-sm"
                     ></textarea>
                   </div>
 
                   <div>
-                    <button type="submit" className="cmnBtn1 w-full sm:w-fit">
+                    <button type="submit" className="w-full sm:w-fit cmnBtn1">
                       Submit
                     </button>
                   </div>
@@ -234,8 +234,8 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <Newes_letter />
-    </>
+    </section>
   );
 }

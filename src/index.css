@@ -33,6 +33,7 @@
   .mybounce {
     animation: bounce2 0.5s;
   }
+
   /* ======== Ranger dslider ========== */
   .input_left input {
     padding: 10px;
@@ -68,6 +69,7 @@
     background-color: red;
   }
 }
+
 /* components */
 @layer components {
   .testimonImg {
@@ -75,15 +77,18 @@
     background: url(./assets/testimonials.jpg) no-repeat center/cover;
   }
   .cntcImg {
-    @apply w-full h-full aspect-[16/9] lg:aspect-auto;
+    @apply w-full aspect-[16/9] lg:aspect-auto;
     background: url(./assets/contact-bg.jpg) no-repeat center/cover;
   }
   .cmnBtn {
-    @apply w-fit inline-block mx-auto mt-4 md:mt-8 lg:mt-12 rounded bg-rose-600  hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
+    @apply inline-block bg-rose-600 hover:bg-rose-700 active:bg-red-500 shadow mx-auto mt-4 md:mt-8 lg:mt-12 px-3 sm:px-4 md:px-5 lg:px-6 rounded focus:outline-none focus:ring w-fit font-medium text-white text-xs sm:text-sm lg:text-base leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 transition-all duration-500 cursor-pointer;
   }
   .cmnBtn1 {
-    @apply inline-block w-full sm:w-auto rounded bg-rose-600 hover:bg-rose-700 px-3 sm:px-4 md:px-5 lg:px-6 leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 text-xs sm:text-sm lg:text-base font-medium text-white shadow focus:outline-none focus:ring active:bg-red-500 transition-all duration-500 cursor-pointer;
+    @apply inline-block bg-rose-600 hover:bg-rose-700 active:bg-red-500 shadow px-3 sm:px-4 md:px-5 lg:px-6 rounded focus:outline-none focus:ring w-full sm:w-auto font-medium text-white text-xs sm:text-sm lg:text-base leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10 transition-all duration-500 cursor-pointer;
   }
+  /* ::-webkit-scrollbar {
+    display: none; 
+  } */
   .padd {
     @apply py-4 sm:py-8 lg:py-12 xl:py-16;
   }
@@ -95,28 +100,28 @@
     @apply w-full;
   }
   .hero-content {
-    @apply absolute left-0 top-0 right-0 bottom-0 grid place-items-center px-4;
+    @apply top-0 right-0 bottom-0 left-0 absolute place-items-center grid px-4;
   }
   .hero-inner {
-    @apply mx-auto max-w-[956px] text-center flex flex-col justify-between md:flex-none;
+    @apply flex flex-col md:flex-none justify-between mx-auto max-w-[956px] text-center;
   }
   .hero-text {
-    @apply w-full flex flex-col sm:gap-0.5 md:gap-1 lg:gap-2;
+    @apply flex flex-col sm:gap-0.5 md:gap-1 lg:gap-2 w-full;
   }
   .hero-tagline {
     @apply bg-gray-800/80 w-fit mx-auto px-4 py-1 rounded-full;
   }
   .tagline-text {
-    @apply text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-white;
+    @apply font-medium text-white text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl;
   }
   .hero-title {
-    @apply font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-yellow-300;
+    @apply font-bold text-yellow-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
   }
   .hero-subtitle {
     @apply hidden sm:inline-block;
   }
   .hero-description {
-    @apply text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[1.2] sm:leading-normal sm:tracking-wide;
+    @apply font-normal text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl leading-[1.2] sm:leading-normal sm:tracking-wide;
   }
   .hero-additional-text {
     @apply hidden sm:inline;
@@ -124,31 +129,31 @@
 
   /* about css */
   .about-header {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16;
+    @apply gap-8 lg:gap-16 grid grid-cols-1 lg:grid-cols-2;
   }
   .about-title {
     @apply w-full;
   }
   .about-title-text {
-    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold;
+    @apply font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
   .about-breadcrumbs {
-    @apply flex gap-4 items-center sm:py-2;
+    @apply flex items-center gap-4 sm:py-2;
   }
   .breadcrumb-home {
-    @apply text-sm font-medium text-black hover:text-[#868c19];
+    @apply font-medium text-black hover:text-[#868c19] text-sm;
   }
   .breadcrumb-divider {
-    @apply text-[6px] text-[#868c19];
+    @apply text-[#868c19] text-[6px];
   }
   .breadcrumb-current {
-    @apply text-sm font-medium text-[#868c19];
+    @apply font-medium text-[#868c19] text-sm;
   }
   .about-image {
     @apply w-full;
   }
   .about-content {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-16 lg:items-center;
+    @apply lg:items-center gap-4 md:gap-6 lg:gap-16 grid grid-cols-1 md:grid-cols-2;
   }
   .about-image-portion {
     @apply w-full;
@@ -174,19 +179,19 @@
   }
 
   .account-header {
-    @apply text-center max-w-[560px] mx-auto pb-8;
+    @apply mx-auto pb-8 max-w-[560px] text-center;
   }
 
   .account-title {
-    @apply text-2xl font-semibold my-2;
+    @apply my-2 font-semibold text-2xl;
   }
 
   .account-subtitle {
-    @apply text-xl font-medium text-gray-600;
+    @apply font-medium text-gray-600 text-xl;
   }
 
   .account-grid {
-    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch lg:grid-cols-3 md:gap-8;
+    @apply sm:items-stretch gap-4 md:gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
   }
 
   /* blog */
@@ -195,27 +200,27 @@
   }
 
   .loading-section {
-    @apply text-2xl text-yellow-400;
+    @apply text-yellow-400 text-2xl;
   }
 
   .error-section {
-    @apply text-2xl text-red-600;
+    @apply text-red-600 text-2xl;
   }
 
   .blog-header {
-    @apply text-center max-w-[560px] mx-auto pb-8;
+    @apply mx-auto pb-8 max-w-[560px] text-center;
   }
 
   .blog-title {
-    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2;
+    @apply mb-2 font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
 
   .blog-subtitle {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600;
+    @apply font-medium text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl;
   }
 
   .blog-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6;
+    @apply gap-4 lg:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
   }
 
   /* terms and condiytions */
@@ -223,9 +228,9 @@
     @apply lg:pl-8;
   }
   .terms h4 {
-    @apply text-blue-800 text-xl lg:text-2xl font-semibold mt-4;
+    @apply mt-4 font-semibold text-blue-800 text-xl lg:text-2xl;
   }
   .terms p {
-    @apply text-sm sm:text-base lg:text-lg text-blue-950 mb-1 lg:mb-1.5 xl:mb-2;
+    @apply mb-1 lg:mb-1.5 xl:mb-2 text-blue-950 text-sm sm:text-base lg:text-lg;
   }
 }
